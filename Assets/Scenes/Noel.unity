@@ -224,6 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1032205122}
   - component: {fileID: 1032205121}
+  - component: {fileID: 1032205123}
   m_Layer: 0
   m_Name: Endings
   m_TagString: Untagged
@@ -259,6 +260,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1032205123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032205120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e6644dfa69aa794ea1419921e2cbf29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endingIconPrefab: {fileID: 8066170323544484280, guid: dec99644c5553fd4b970fc0eee637a39, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
