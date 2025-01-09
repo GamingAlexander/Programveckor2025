@@ -5,17 +5,20 @@ using UnityEngine;
 public class DisplayEndings : MonoBehaviour
 {
     CompletedEndings saved;
-    int length;
+    float length;
     [SerializeField] GameObject endingIconPrefab;
-
-    void Start()
+    
+    public void UpdateEndingsDisplay()
     {
         saved = GetComponent<CompletedEndings>();
         length = saved.endings.Length;
         for (int i = 0; i < length; i++)
         {
-            Instantiate(endingIconPrefab, new Vector3(-length +i, 0), Quaternion.identity, transform);
+            GameObject newDisplay = Instantiate(endingIconPrefab, Vector3.zero, Quaternion.identity, transform);
+            if (saved.endings[i] == true)
+            {
+                newDisplay.GetComponent<EndDisplay>().Unlocked();
+            }
         }
     }
-
 }

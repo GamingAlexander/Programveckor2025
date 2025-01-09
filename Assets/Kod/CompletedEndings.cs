@@ -5,10 +5,11 @@ using UnityEngine;
 public class CompletedEndings : MonoBehaviour
 {
     public bool[] endings = new bool[3];
+    public bool displaying;
 
-    public void Start()
+    public void Start() //Checks which endings has been saved as completed 
     {
-        for (int i = 1; i < endings.Length+1; i++)
+        for (int i = 1; i < endings.Length+1; i++) 
         {
             if (i == PlayerPrefs.GetInt("Ending"+i,0))
             {
@@ -16,9 +17,13 @@ public class CompletedEndings : MonoBehaviour
             }
             
         }
+        if (displaying)
+        {
+            GetComponent<DisplayEndings>().UpdateEndingsDisplay();
+        }
     }
 
-    public void CompleteEndning(int number)
+    public void CompleteEndning(int number) //saves ending x as complete 
     {
         if (endings[number-1] != null)
         {
@@ -32,7 +37,7 @@ public class CompletedEndings : MonoBehaviour
         
     }
 
-    public void resetCompletedEndings()
+    public void resetCompletedEndings() //all endings are incomplete 
     {
         for (int i = 1; i < endings.Length + 1; i++)
         {
@@ -41,7 +46,7 @@ public class CompletedEndings : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void Update() //temp
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
