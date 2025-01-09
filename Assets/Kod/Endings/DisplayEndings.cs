@@ -7,6 +7,7 @@ public class DisplayEndings : MonoBehaviour
     CompletedEndings saved;
     float length;
     [SerializeField] GameObject endingIconPrefab;
+    [SerializeField] string[] endingTitles;
     
     public void UpdateEndingsDisplay()
     {
@@ -17,6 +18,7 @@ public class DisplayEndings : MonoBehaviour
             GameObject newDisplay = Instantiate(endingIconPrefab, Vector3.zero, Quaternion.identity, transform);
             if (saved.endings[i] == true)
             {
+                newDisplay.GetComponent<EndDisplay>().title = endingTitles[i];
                 newDisplay.GetComponent<EndDisplay>().Unlocked();
             }
         }
