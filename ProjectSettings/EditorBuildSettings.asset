@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Alexander Test.unity
+    guid: df65f28df01084e49b088ebd7bfb543c
+  - enabled: 1
+    path: Assets/Kod/Dialogue/TESTSCENE.unity
+    guid: d8118ba1cc60fdf4089d172a80cf2390
   m_configObjects: {}
