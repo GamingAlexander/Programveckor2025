@@ -13,24 +13,13 @@ MonoBehaviour:
   m_Name: Test2
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: TEST 2
+    dialogueText: Why was I born just to suffer...
     responses:
-    - responseText: Funkar
+    - responseText: Continue
       nextNode:
-        dialogueText: Vad bra
+        dialogueText: Why?
         responses:
-        - responseText: Continiue
-          nextNode:
-            dialogueText: 
-            responses: []
-          sceneToLoad: 
-      sceneToLoad: 
-    - responseText: Funkar inte
-      nextNode:
-        dialogueText: "Oh nej vad d\xE5ligt hoppas att du har klarat av att fixa
-          saken som du skulle fixa men det beror p\xE5 s\xE5klart"
-        responses:
-        - responseText: Continiue
+        - responseText: Continue
           nextNode:
             dialogueText: 
             responses: []
