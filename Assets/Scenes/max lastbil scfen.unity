@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1b0bac3bdacef49a5392b85db85b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  driveForce: 12
+  driveForce: 14
   turnAngle: 0.7
   forceDoubler: 5
 --- !u!50 &231686455
@@ -236,8 +236,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 12
-  m_LinearDrag: 1.8
-  m_AngularDrag: 0.07
+  m_LinearDrag: 2
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
