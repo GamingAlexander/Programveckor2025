@@ -48,5 +48,5 @@ MonoBehaviour:
           nextNode:
             dialogueText: 
             responses: []
-          sceneToLoad: 
-      sceneToLoad: TESTSCENE
+          sceneToLoad: TESTSCENE
+      sceneToLoad: 
