@@ -5,7 +5,7 @@ using UnityEngine;
 public class drive : MonoBehaviour
 {
     Rigidbody2D rb2d;
-    [SerializeField] int driveForce;
+    [SerializeField] int driveForce;   
     bool driving = false;
     [SerializeField] float turnAngle;
     [SerializeField] int forceDoubler;
@@ -23,9 +23,9 @@ public class drive : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W))
             {
-                if ((rb2d.velocity.x < forceDoubler && rb2d.velocity.x > -forceDoubler))
+                if ((rb2d.velocity.x > forceDoubler || rb2d.velocity.x < -forceDoubler || rb2d.velocity.y > forceDoubler || rb2d.velocity.y < -forceDoubler))
                 {
-                    rb2d.AddForce(transform.up * driveForce * 1.7f);
+                    rb2d.AddForce(transform.up * driveForce * 1.6f);
                 }
                 else
                     rb2d.AddForce(transform.up * driveForce);
