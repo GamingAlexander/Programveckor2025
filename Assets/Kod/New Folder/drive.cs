@@ -25,7 +25,7 @@ public class drive : MonoBehaviour
             {
                 if ((rb2d.velocity.x > forceDoubler || rb2d.velocity.x < -forceDoubler || rb2d.velocity.y > forceDoubler || rb2d.velocity.y < -forceDoubler))
                 {
-                    rb2d.AddForce(transform.up * driveForce * 1.6f * Time.deltaTime);
+                    rb2d.AddForce(transform.up * driveForce * 2f * Time.deltaTime);
                 }
                 else
                     rb2d.AddForce(transform.up * driveForce * Time.deltaTime);
