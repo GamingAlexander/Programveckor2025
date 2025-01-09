@@ -25,16 +25,8 @@ public class CompletedEndings : MonoBehaviour
 
     public void CompleteEndning(int number) //saves ending x as complete 
     {
-        if (endings[number-1] != null)
-        {
-            endings[number-1] = true;
-            PlayerPrefs.SetInt("Ending" + number, number);
-        }
-        else
-        {
-            print("no ending to safe");
-        }
-        
+        endings[number - 1] = true;
+        PlayerPrefs.SetInt("Ending" + number, number);
     }
 
     public void resetCompletedEndings() //all endings are incomplete 
