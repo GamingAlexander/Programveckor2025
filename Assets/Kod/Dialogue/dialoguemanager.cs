@@ -1,7 +1,9 @@
+using System.Collections;
 using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -12,6 +14,10 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI DialogTitleText, DialogBodyText; // Text components for title and body
     public GameObject responseButtonPrefab; // Prefab for generating response buttons
     public Transform responseButtonContainer; // Container to hold response buttons
+
+    [SerializeField] private float typingSpeed = 0.05f; // Delay between each character (adjustable)
+
+    private Coroutine typingCoroutine;
 
     private void Awake()
     {
@@ -35,9 +41,17 @@ public class DialogueManager : MonoBehaviour
         // Display the dialogue UI
         ShowDialogue();
 
-        // Set dialogue title and body text
+        // Set dialogue title
         DialogTitleText.text = title;
-        DialogBodyText.text = node.dialogueText;
+
+        // Stop any ongoing typing effect and clear text
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+
+        // Start typing the dialogue text
+        typingCoroutine = StartCoroutine(TypeText(node.dialogueText));
 
         // Remove any existing response buttons
         foreach (Transform child in responseButtonContainer)
@@ -56,9 +70,27 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    // Coroutine to type text letter by letter
+    private IEnumerator TypeText(string text)
+    {
+        DialogBodyText.text = ""; // Clear the text before starting
+        foreach (char c in text)
+        {
+            DialogBodyText.text += c;
+            yield return new WaitForSeconds(typingSpeed); // Wait before adding next character
+        }
+    }
+
     // Handles response selection and triggers next dialogue node
     public void SelectResponse(DialogueResponse response, string title)
     {
+        // Check if there's a scene to load
+        if (!string.IsNullOrEmpty(response.sceneToLoad))
+        {
+            SceneManager.LoadScene(response.sceneToLoad);
+            return;
+        }
+
         // Check if there's a follow-up node
         if (!response.nextNode.IsLastNode())
         {

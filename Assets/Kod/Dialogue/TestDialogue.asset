@@ -23,15 +23,30 @@ MonoBehaviour:
           nextNode:
             dialogueText: "OK VAD BRA HEJD\xC5"
             responses:
-            - responseText: Continiu
+            - responseText: Next
               nextNode:
                 dialogueText: ' '
                 responses: []
+              sceneToLoad: 
+          sceneToLoad: 
         - responseText: NEJ
           nextNode:
             dialogueText: "OK HEJD\xC5"
-            responses: []
+            responses:
+            - responseText: "Hejd\xE5"
+              nextNode:
+                dialogueText: 
+                responses: []
+              sceneToLoad: 
+          sceneToLoad: 
+      sceneToLoad: 
     - responseText: Goodbye
       nextNode:
         dialogueText: Welll, bye
-        responses: []
+        responses:
+        - responseText: Next
+          nextNode:
+            dialogueText: 
+            responses: []
+          sceneToLoad: 
+      sceneToLoad: TESTSCENE
