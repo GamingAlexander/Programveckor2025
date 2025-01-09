@@ -220,9 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1b0bac3bdacef49a5392b85db85b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  driveForce: 14
+  driveForce: 16
   turnAngle: 0.7
-  forceDoubler: 5
+  forceDoubler: 2
 --- !u!50 &231686455
 Rigidbody2D:
   serializedVersion: 4

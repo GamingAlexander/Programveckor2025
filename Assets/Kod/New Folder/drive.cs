@@ -25,16 +25,16 @@ public class drive : MonoBehaviour
             {
                 if ((rb2d.velocity.x > forceDoubler || rb2d.velocity.x < -forceDoubler || rb2d.velocity.y > forceDoubler || rb2d.velocity.y < -forceDoubler))
                 {
-                    rb2d.AddForce(transform.up * driveForce * 1.6f);
+                    rb2d.AddForce(transform.up * driveForce * 1.6f * Time.deltaTime);
                 }
                 else
-                    rb2d.AddForce(transform.up * driveForce);
+                    rb2d.AddForce(transform.up * driveForce * Time.deltaTime);
                 driving = true;
             }
 
             if (Input.GetKey(KeyCode.S))
             {
-                rb2d.AddForce(-transform.up * driveForce);
+                rb2d.AddForce(-transform.up * driveForce * Time.deltaTime);
                 driving = true;
             }
 
@@ -55,7 +55,7 @@ public class drive : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftControl))
         {
-            rb2d.AddForce(-rb2d.velocity / 0.4f);
+            rb2d.AddForce(-rb2d.velocity / 0.8f * Time.deltaTime);
             if(rb2d.velocity.x < 0.8 && rb2d.velocity.x > -0.8 && rb2d.velocity.y < 0.8 && rb2d.velocity.y > -0.8)
             {
                 rb2d.Sleep();
@@ -63,7 +63,7 @@ public class drive : MonoBehaviour
         }
         else if (driving == false)
         {
-            rb2d.AddForce(-rb2d.velocity / 0.7f);
+            rb2d.AddForce(-rb2d.velocity / 1.2f * Time.deltaTime);
             if (rb2d.velocity.x < 0.7 && rb2d.velocity.x > -0.7 && rb2d.velocity.y < 0.7 && rb2d.velocity.y > -0.7)
             {
                 rb2d.Sleep();
