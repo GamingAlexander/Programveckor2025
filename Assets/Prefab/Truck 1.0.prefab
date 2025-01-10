@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2775346498309549777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 6c8201dde2e6cf640965fdbd5f2001b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ded4400921071d74c95e7bc98080a483, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,14 +98,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: 6c8201dde2e6cf640965fdbd5f2001b7, type: 3}
-  - {fileID: 21300000, guid: 058ea6e4773caf849b7774391e190c61, type: 3}
-  - {fileID: 21300000, guid: 4d3c4de5088dd3c489730d8efdbec46c, type: 3}
-  - {fileID: 21300000, guid: 053a8a08f59582046a56c52ac2258b89, type: 3}
-  - {fileID: 21300000, guid: 19e762e1a6aa9854399a91b43bef77d8, type: 3}
-  - {fileID: 21300000, guid: 9a91aac2d07d13d47be7628a5f51a7e7, type: 3}
-  - {fileID: 21300000, guid: 8d1e677d53455084da7ec7343b8545c4, type: 3}
-  - {fileID: 21300000, guid: 8c11e3b95c0739740b932805f876ce2d, type: 3}
+  - {fileID: 21300000, guid: ded4400921071d74c95e7bc98080a483, type: 3}
+  - {fileID: 21300000, guid: 688cbf310da199548ae289aba3dfb21d, type: 3}
+  - {fileID: 21300000, guid: bb84295aa61d47c44995a0d74248222e, type: 3}
+  - {fileID: 21300000, guid: 26b54e4b72466594592fd4bfd63f37f2, type: 3}
+  - {fileID: 21300000, guid: d3c84328ad3be68499d8ad9649c1d28b, type: 3}
+  - {fileID: 21300000, guid: a3c6df8ab0a81e841be4995fdb8d8c21, type: 3}
+  - {fileID: 21300000, guid: d85037615922c054db9ccaf1b9493aaf, type: 3}
+  - {fileID: 21300000, guid: 7dcac4fb183f2c44eb411a1556f10963, type: 3}
   dragParticleEffectPrefab: {fileID: 9183460510332273932, guid: 7ca5f66b4608af7458eded20e15de153, type: 3}
   currentDirectionIndex: -1
 --- !u!1 &7158239552581784906
@@ -120,6 +120,8 @@ GameObject:
   - component: {fileID: 5384036399885197069}
   - component: {fileID: 8573719568121015149}
   - component: {fileID: 8677690035828111211}
+  - component: {fileID: 5097075695343011719}
+  - component: {fileID: 7042639216269822019}
   m_Layer: 0
   m_Name: Truck 1.0
   m_TagString: Untagged
@@ -183,7 +185,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10000
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 0.25943398, b: 0.25943398, a: 0}
   m_FlipX: 0
@@ -238,3 +240,60 @@ MonoBehaviour:
   turnAngle: 175
   forceDoubler: 2
   autoTurn: 4
+--- !u!61 &5097075695343011719
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158239552581784906}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.78}
+  m_EdgeRadius: 0
+--- !u!114 &7042639216269822019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158239552581784906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564d633e63287d542ac3e12e13c63a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
