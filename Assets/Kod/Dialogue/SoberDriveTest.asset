@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff038411e4daab4ebd5c814a131b0fd, type: 3}
+  m_Name: SoberDriveTest
+  m_EditorClassIdentifier: 
+  RootNode:
+    dialogueText: Damn... that water was something else... Damn...
+    responses:
+    - responseText: Continue
+      nextNode:
+        dialogueText: '"IMPORTANT NEWS! Trucks have been found transporting illegal
+          immigrants! If you or someone you know is transporting illegal immigrants
+          please contact the police. That''s all folks have a nice evening!"'
+        responses:
+        - responseText: Continue
+          nextNode:
+            dialogueText: Damn, immigrants they say? Illegal they say? Hmmm, I do
+              wonder.
+            responses:
+            - responseText: Continue
+              nextNode:
+                dialogueText: No, they couldn't... Maybe I should check just in case?
+                responses:
+                - responseText: Yeah...
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+                  sceneToLoad: 
+                - responseText: Nah...
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+                  sceneToLoad: 
+              sceneToLoad: 
+          sceneToLoad: 
+      sceneToLoad: 

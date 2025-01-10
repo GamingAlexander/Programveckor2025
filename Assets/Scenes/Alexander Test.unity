@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0242885dca599bb42a994d9fd1e58ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Tester
-  Dialogue: {fileID: 11400000, guid: a97f7f61cad199b4e845ef70724c2f92, type: 2}
+  Name: Cliff Barton XI
+  Dialogue: {fileID: 11400000, guid: 496d5033042cea340bee87a391c329ac, type: 2}
 --- !u!4 &106668571
 Transform:
   m_ObjectHideFlags: 0
@@ -391,8 +391,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -860, y: 110.7}
-  m_SizeDelta: {x: 200, y: 53.776}
+  m_AnchoredPosition: {x: -795.53687, y: 110.7}
+  m_SizeDelta: {x: 328.9263, y: 53.776}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &808516008
 MonoBehaviour:
