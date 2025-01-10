@@ -17,29 +17,21 @@ MonoBehaviour:
     responses:
     - responseText: Continue
       nextNode:
-        dialogueText: '"IMPORTANT NEWS! Trucks have been found transporting illegal
-          immigrants! If you or someone you know is transporting illegal immigrants
-          please contact the police. That''s all folks have a nice evening!"'
-        responses:
-        - responseText: Continue
-          nextNode:
-            dialogueText: Damn, immigrants they say? Illegal they say? Hmmm, I do
-              wonder.
-            responses:
-            - responseText: Continue
-              nextNode:
-                dialogueText: No, they couldn't... Maybe I should check just in case?
-                responses:
-                - responseText: Yeah...
-                  nextNode:
-                    dialogueText: 
-                    responses: []
-                  sceneToLoad: 
-                - responseText: Nah...
-                  nextNode:
-                    dialogueText: 
-                    responses: []
-                  sceneToLoad: 
-              sceneToLoad: 
-          sceneToLoad: 
+        dialogueText: 
+        responses: []
+      sceneToLoad: 
+    - responseText: Continue
+      nextNode:
+        dialogueText: 
+        responses: []
+      sceneToLoad: 
+    - responseText: Continue
+      nextNode:
+        dialogueText: 
+        responses: []
+      sceneToLoad: 
+    - responseText: Continue
+      nextNode:
+        dialogueText: 
+        responses: []
       sceneToLoad: 
