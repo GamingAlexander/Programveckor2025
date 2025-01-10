@@ -266,6 +266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Truck 1.0
       objectReference: {fileID: 0}
+    - target: {fileID: 8677690035828111211, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: driveForce
+      value: 5300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
