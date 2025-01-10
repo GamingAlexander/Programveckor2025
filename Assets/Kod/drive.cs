@@ -8,6 +8,7 @@ public class drive : MonoBehaviour
     TruckSprite spriteHandler;
     [SerializeField] int driveForce;   
     bool driving = false;
+    public bool backing;
     [SerializeField] float turnAngle;
     [SerializeField] int forceDoubler;
     [SerializeField] float autoTurn;
@@ -38,6 +39,11 @@ public class drive : MonoBehaviour
             {
                 rb2d.AddForce(-transform.up * driveForce * Time.deltaTime);
                 driving = true;
+                backing = true;
+            }
+            else
+            {
+                backing = false;
             }
 
             if (!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)) //automatisk broms

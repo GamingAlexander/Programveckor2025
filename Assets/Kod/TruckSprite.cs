@@ -58,9 +58,15 @@ public class TruckSprite : MonoBehaviour
 
     void CheckForDragParticles()
     {
-        
-        if (dragParticleEffectPrefab == null || rb == null)
+        if (rotObj.GetComponent<drive>().backing)
+        {
             return;
+        }
+        if (dragParticleEffectPrefab == null || rb == null)
+        {
+            return;
+        }
+            
 
         // Get the forward direction based on the sprite direction
         Vector2 forwardDirection = DirectionFromIndex(currentDirectionIndex);
@@ -70,9 +76,11 @@ public class TruckSprite : MonoBehaviour
         Vector2 velocityDirection = velocity.normalized;
 
         // Check if the object is moving
-        if (velocity.magnitude < 0.1f)
+        if (velocity.magnitude < 0.5f)
+        {
             return;
-
+        }
+            
         // Calculate misalignment angle
         float angleDifference = Vector2.Angle(forwardDirection, velocityDirection);
 
@@ -80,9 +88,10 @@ public class TruckSprite : MonoBehaviour
         // Debug.Log($"Angle Difference: {angleDifference}, Velocity Magnitude: {velocity.magnitude}");
 
         // Spawn particles if misalignment is significant
-        if (angleDifference > 20f && Random.value <= 0.2f) // Adjust the threshold as needed
+        if (angleDifference > 20f && Random.value <= 0.8f) // Adjust the threshold as needed
         {
-            Instantiate(dragParticleEffectPrefab, transform.position, Quaternion.identity);
+            CreateParticle(0.25f);
+            CreateParticle(-0.25f);
         }
         
     }
@@ -93,15 +102,20 @@ public class TruckSprite : MonoBehaviour
         switch (index)
         {
             case 0: return Vector2.up; // 0° (North)
-            case 1: return new Vector2(1, 1).normalized; // 45° (Northeast)
-            case 2: return Vector2.right; // 90° (East)
-            case 3: return new Vector2(1, -1).normalized; // 135° (Southeast)
+            case 1: return new Vector2(-1, 1).normalized; // 315° (Northwest)
+            case 2: return Vector2.left; // 270° (West)
+            case 3: return new Vector2(-1, -1).normalized; // 225° (Southwest)
             case 4: return Vector2.down; // 180° (South)
-            case 5: return new Vector2(-1, -1).normalized; // 225° (Southwest)
-            case 6: return Vector2.left; // 270° (West)
-            case 7: return new Vector2(-1, 1).normalized; // 315° (Northwest)
+            case 5: return new Vector2(1, -1).normalized; // 135° (Southeast)
+            case 6: return Vector2.right; // 90° (East)
+            case 7: return new Vector2(1, 1).normalized; // 45° (Northeast)
             default: return Vector2.zero;
         }
+    }
+
+    private void CreateParticle(float offset)
+    {
+        Instantiate(dragParticleEffectPrefab, transform.position + rotObj.up * -1.2f + rotObj.right * offset, rotObj.transform.rotation);
     }
 }
 
