@@ -9,7 +9,7 @@ public class TruckSprite : MonoBehaviour
     private Transform rotObj;
     private SpriteRenderer playerSprite;
 
-    private int currentDirectionIndex = -1; // Keeps track of the current direction index
+    public int currentDirectionIndex = -1; // Keeps track of the current direction index
     private Rigidbody2D rb; // To track movement direction
 
     // Start is called before the first frame update
@@ -54,11 +54,11 @@ public class TruckSprite : MonoBehaviour
             // Update the current direction index
             currentDirectionIndex = directionIndex;
         }
-        Debug.Log($"Direction Index: {directionIndex}, Expected Sprite: {sprites[directionIndex].name}");
     }
 
     void CheckForDragParticles()
     {
+        
         if (dragParticleEffectPrefab == null || rb == null)
             return;
 
@@ -84,6 +84,7 @@ public class TruckSprite : MonoBehaviour
         {
             Instantiate(dragParticleEffectPrefab, transform.position, Quaternion.identity);
         }
+        
     }
 
     Vector2 DirectionFromIndex(int index)

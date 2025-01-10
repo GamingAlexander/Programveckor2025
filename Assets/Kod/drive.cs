@@ -5,14 +5,17 @@ using UnityEngine;
 public class drive : MonoBehaviour
 {
     Rigidbody2D rb2d;
+    TruckSprite spriteHandler;
     [SerializeField] int driveForce;   
     bool driving = false;
     [SerializeField] float turnAngle;
     [SerializeField] int forceDoubler;
+    [SerializeField] float autoTurn;
     // Start is called before the first frame update
     void Start()
     {
         rb2d = FindObjectOfType<Rigidbody2D>();
+        spriteHandler = transform.GetChild(0).GetComponent<TruckSprite>();
     }
 
     // Update is called once per frame
@@ -68,5 +71,31 @@ public class drive : MonoBehaviour
                 rb2d.Sleep();
             }
         }
+
+        if (spriteHandler.currentDirectionIndex == 0) //ifall sprite är norr 
+        {
+            Debug.Log("fix north");
+            float newAngle = Mathf.LerpAngle(transform.eulerAngles.z, 0, autoTurn * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(0, 0, newAngle);
+        }
+        if (spriteHandler.currentDirectionIndex == 2) //ifall sprite är öst
+        {
+            Debug.Log("fix east");
+            float newAngle = Mathf.LerpAngle(transform.eulerAngles.z, 90, autoTurn * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(0, 0, newAngle);
+        }
+        if (spriteHandler.currentDirectionIndex == 4) //ifall sprite är syd
+        {
+            Debug.Log("fix south");
+            float newAngle = Mathf.LerpAngle(transform.eulerAngles.z, 180, autoTurn * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(0, 0, newAngle);
+        }
+        if (spriteHandler.currentDirectionIndex == 6) //ifall sprite är väst
+        {
+            Debug.Log("fix west");
+            float newAngle = Mathf.LerpAngle(transform.eulerAngles.z, 270, autoTurn * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(0, 0, newAngle);
+        }
+
     }
 }

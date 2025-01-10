@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff038411e4daab4ebd5c814a131b0fd, type: 3}
+  m_Name: Immigrant
+  m_EditorClassIdentifier: 
+  RootNode:
+    dialogueText: "- oh yeah mmmm\u2026 "
+    responses:
+    - responseText: Continue
+      nextNode:
+        dialogueText: '*BANG* What the hell...? '
+        responses:
+        - responseText: Continue
+          nextNode:
+            dialogueText: "- No... No, no, no. This ain\u2019t real. "
+            responses:
+            - responseText: Continue
+              nextNode:
+                dialogueText: "They\u2019ll lock me up. I didn\u2019t know. I didn\u2019t
+                  know... "
+                responses:
+                - responseText: Continue
+                  nextNode:
+                    dialogueText: "They\u2019re just people. Just scared people. "
+                    responses:
+                    - responseText: Continue
+                      nextNode:
+                        dialogueText: 
+                      sceneToLoad: 
+                  sceneToLoad: 
+              sceneToLoad: 
+          sceneToLoad: 
+      sceneToLoad: 
