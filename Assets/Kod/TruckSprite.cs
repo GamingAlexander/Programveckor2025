@@ -58,6 +58,8 @@ public class TruckSprite : MonoBehaviour
 
     void CheckForDragParticles()
     {
+        
+
         if (rotObj.GetComponent<drive>().backing)
         {
             return;
@@ -80,6 +82,11 @@ public class TruckSprite : MonoBehaviour
         {
             return;
         }
+        if (rotObj.GetComponent<drive>().bracking)
+        {
+            TireParticle(0.9f);
+            return;
+        }
             
         // Calculate misalignment angle
         float angleDifference = Vector2.Angle(forwardDirection, velocityDirection);
@@ -90,8 +97,7 @@ public class TruckSprite : MonoBehaviour
         // Spawn particles if misalignment is significant
         if (angleDifference > 20f && Random.value <= 0.8f) // Adjust the threshold as needed
         {
-            CreateParticle(0.25f);
-            CreateParticle(-0.25f);
+            TireParticle(0.6f);
         }
         
     }
@@ -113,9 +119,29 @@ public class TruckSprite : MonoBehaviour
         }
     }
 
-    private void CreateParticle(float offset)
+    private void TireParticle(float chance)
     {
-        Instantiate(dragParticleEffectPrefab, transform.position + rotObj.up * -1.2f + rotObj.right * offset, rotObj.transform.rotation);
+        float spred = 0.3f;
+        float offset = 0;
+        if (currentDirectionIndex == 2 || currentDirectionIndex == 3 || currentDirectionIndex == 1)
+        {
+            offset = -0.5f;
+        }
+        if (currentDirectionIndex == 5 || currentDirectionIndex == 6 || currentDirectionIndex == 7)
+        {
+            offset = 0.5f;
+        }
+        
+        CreateParticles(spred + offset, chance);
+        CreateParticles(-spred + offset, chance);
+    }
+
+    private void CreateParticles(float pos, float chance)
+    {
+        if (Random.value <= chance)
+        {
+            Instantiate(dragParticleEffectPrefab, transform.position + rotObj.up * -1.2f + rotObj.right * pos, rotObj.transform.rotation);
+        }
     }
 }
 

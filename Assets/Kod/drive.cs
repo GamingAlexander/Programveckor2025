@@ -9,6 +9,7 @@ public class drive : MonoBehaviour
     [SerializeField] int driveForce;   
     bool driving = false;
     public bool backing;
+    public bool bracking;
     [SerializeField] float turnAngle;
     [SerializeField] int forceDoubler;
     [SerializeField] float autoTurn;
@@ -50,6 +51,7 @@ public class drive : MonoBehaviour
             {
                 driving = false;
             }
+            bracking = false;
         }
 
         if(Input.GetKey(KeyCode.A)) //svänga vänster och höger
@@ -68,6 +70,7 @@ public class drive : MonoBehaviour
             {
                 rb2d.Sleep();
             }
+            bracking = true;
         }
         else if (driving == false) //automatisk broms
         {
