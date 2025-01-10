@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 6c8201dde2e6cf640965fdbd5f2001b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -106,6 +106,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9a91aac2d07d13d47be7628a5f51a7e7, type: 3}
   - {fileID: 21300000, guid: 8d1e677d53455084da7ec7343b8545c4, type: 3}
   - {fileID: 21300000, guid: 8c11e3b95c0739740b932805f876ce2d, type: 3}
+  dragParticleEffectPrefab: {fileID: 9183460510332273932, guid: 7ca5f66b4608af7458eded20e15de153, type: 3}
+  currentDirectionIndex: -1
 --- !u!1 &7158239552581784906
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,5 +235,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   driveForce: 5400
-  turnAngle: 55
+  turnAngle: 175
   forceDoubler: 2
+  autoTurn: 4
