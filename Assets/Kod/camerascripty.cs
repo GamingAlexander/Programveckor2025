@@ -15,10 +15,9 @@ public class cameraScripty : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         camTarget.z = -10;
-
         camTarget.x = truck.transform.position.x;
         camTarget.y = truck.transform.position.y;
         transform.position = Vector3.Lerp(transform.position, camTarget, moveSpeed * Time.deltaTime);
