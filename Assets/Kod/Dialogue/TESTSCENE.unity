@@ -122,6 +122,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &194260565
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 923.3896
+      objectReference: {fileID: 0}
+    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 447.16107
+      objectReference: {fileID: 0}
+    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158239552581784906, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_Name
+      value: Truck 1.0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
 --- !u!1 &388216669
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,7 +504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 103.530334, y: -104.91}
+  m_AnchoredPosition: {x: 158, y: -131.22}
   m_SizeDelta: {x: -1061.9183, y: -262.43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &757500392
@@ -495,6 +552,7 @@ GameObject:
   - component: {fileID: 781374548}
   - component: {fileID: 781374547}
   - component: {fileID: 781374546}
+  - component: {fileID: 781374549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -569,13 +627,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781374545}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &781374549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781374545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6481f6ac7611ca64399b2d544963dfb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camTarget: {x: 0, y: 0, z: 0}
+  moveSpeed: 2
 --- !u!1 &899881667
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +680,7 @@ MonoBehaviour:
   DialogueParent: {fileID: 1724593312}
   DialogTitleText: {fileID: 1826156347}
   DialogBodyText: {fileID: 1688606081}
-  responseButtonPrefab: {fileID: 7305926644384758159, guid: 52353df179576c348b2bcdcccd14fe47, type: 3}
+  responseButtonPrefab: {fileID: 2928751703015123877, guid: c1be430f0a533d845b9195e727b9cd49, type: 3}
   responseButtonContainer: {fileID: 757500391}
   typingSpeed: 0.05
   autoSkipDelay: 2
@@ -748,7 +820,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -4.429245, y: 4.515991, z: -13.5980835, w: -2.611061}
+  m_margin: {x: -4.429245, y: 4.515991, z: 21.154358, w: -2.611061}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -979,8 +1051,9 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 781374548}
   - {fileID: 899881669}
   - {fileID: 713164194}
   - {fileID: 500220015}
   - {fileID: 388216673}
+  - {fileID: 781374548}
+  - {fileID: 194260565}

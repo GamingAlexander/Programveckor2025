@@ -29,10 +29,10 @@ MonoBehaviour:
           nextNode:
             dialogueText: 
             responses: []
-          sceneToLoad: 
+          sceneToLoad: GasstationTest
         - responseText: No gas
           nextNode:
             dialogueText: 
             responses: []
-          sceneToLoad: 
+          sceneToLoad: Immigranttest
       sceneToLoad: 
