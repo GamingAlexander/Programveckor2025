@@ -130,58 +130,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 681260122336564634, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ded4400921071d74c95e7bc98080a483, type: 3}
-    - target: {fileID: 1728927326300790725, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1728927326300790725, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1728927326300790725, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1728927326300790725, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2524813801117741717, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: sprites.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: ded4400921071d74c95e7bc98080a483, type: 3}
-    - target: {fileID: 2524813801117741717, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: sprites.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 688cbf310da199548ae289aba3dfb21d, type: 3}
-    - target: {fileID: 2524813801117741717, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: sprites.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: bb84295aa61d47c44995a0d74248222e, type: 3}
-    - target: {fileID: 2524813801117741717, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: sprites.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 26b54e4b72466594592fd4bfd63f37f2, type: 3}
-    - target: {fileID: 2524813801117741717, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: sprites.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: d3c84328ad3be68499d8ad9649c1d28b, type: 3}
-    - target: {fileID: 2524813801117741717, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: sprites.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: a3c6df8ab0a81e841be4995fdb8d8c21, type: 3}
-    - target: {fileID: 2524813801117741717, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: sprites.Array.data[6]
-      value: 
-      objectReference: {fileID: 21300000, guid: d85037615922c054db9ccaf1b9493aaf, type: 3}
-    - target: {fileID: 2524813801117741717, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: sprites.Array.data[7]
-      value: 
-      objectReference: {fileID: 21300000, guid: 7dcac4fb183f2c44eb411a1556f10963, type: 3}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.4
@@ -222,10 +170,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5384036399885197069, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10000
-      objectReference: {fileID: 0}
     - target: {fileID: 7158239552581784906, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_Name
       value: Truck 1.0
@@ -233,76 +177,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7158239552581784906, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 430788856}
-    - targetCorrespondingSourceObject: {fileID: 7158239552581784906, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 430788861}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
---- !u!1 &430788855 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7158239552581784906, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-  m_PrefabInstance: {fileID: 430788854}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &430788856
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430788855}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2.78}
-  m_EdgeRadius: 0
---- !u!114 &430788861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430788855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 564d633e63287d542ac3e12e13c63a66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &817990643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +883,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1051,7 +927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camTarget: {x: 0, y: 0, z: 0}
-  moveSpeed: 3
+  moveSpeed: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
