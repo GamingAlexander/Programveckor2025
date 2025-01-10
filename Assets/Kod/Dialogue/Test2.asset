@@ -13,15 +13,41 @@ MonoBehaviour:
   m_Name: Test2
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: Why was I born just to suffer...
+    dialogueText: Ahhhh.... what a nice day. Some whiskey could make it even better
     responses:
-    - responseText: Continue
+    - responseText: Take whiskey
       nextNode:
-        dialogueText: Why?
+        dialogueText: This is the bomb. Thight Tight. WOW Blue yellow pink i dont
+          care keep bringing me that. WOW!
+        responses:
+        - responseText: Continue
+          nextNode:
+            dialogueText: Hmmm.... should I maybe take another one....
+            responses:
+            - responseText: YES!!!
+              nextNode:
+                dialogueText: 'Well, time for some more!!!!!!!!!!!!!! '
+                responses:
+                - responseText: I love drinkin' and drivin'
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+                  sceneToLoad: TESTSCENE
+              sceneToLoad: 
+            - responseText: Nah...
+              nextNode:
+                dialogueText: 
+                responses: []
+              sceneToLoad: TESTSCENE
+          sceneToLoad: 
+      sceneToLoad: 
+    - responseText: Drink water
+      nextNode:
+        dialogueText: Damn... this water ain't the bomb. I'ma get outa here.
         responses:
         - responseText: Continue
           nextNode:
             dialogueText: 
             responses: []
-          sceneToLoad: 
+          sceneToLoad: TestSoberScene
       sceneToLoad: 

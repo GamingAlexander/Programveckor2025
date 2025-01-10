@@ -5,15 +5,11 @@ public class Actor : MonoBehaviour
     public string Name;
     public Dialogue Dialogue;
 
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SpeakTo();
-        }
+        SpeakTo();
     }
 
-    // Trigger dialogue for this actor
     public void SpeakTo()
     {
         DialogueManager.Instance.StartDialogue(Name, Dialogue.RootNode);

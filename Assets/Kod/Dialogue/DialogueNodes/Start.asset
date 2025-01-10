@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff038411e4daab4ebd5c814a131b0fd, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  RootNode:
+    dialogueText: "- Well, I\u2019ll be damned\u2026 she\u2019s runnin\u2019 lower\u2019n
+      a rattlesnake in a ditch. Dang it, Cliff, ya knew better than to skip that
+      last fill-up. Guess I\u2019ll be makin\u2019 an unscheduled pit stop. "
+    responses:
+    - responseText: Continue
+      nextNode:
+        dialogueText: "- Load\u2019s strapped down tighter\u2019n Aunt May\u2019s
+          Sunday corset, so at least that\u2019s somethin\u2019. Ain\u2019t no way
+          I\u2019m runnin\u2019 outta juice on a stretch like this, though. Better
+          start lookin\u2019 fer a station \u2018fore I\u2019m hoofin\u2019 it to
+          the nearest pump. "
+        responses:
+        - responseText: Gas
+          nextNode:
+            dialogueText: 
+            responses: []
+          sceneToLoad: 
+        - responseText: No gas
+          nextNode:
+            dialogueText: 
+            responses: []
+          sceneToLoad: 
+      sceneToLoad: 

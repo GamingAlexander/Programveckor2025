@@ -13,40 +13,21 @@ MonoBehaviour:
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: Hello Tester
+    dialogueText: I AM THE DRIVER!!! WOW AAAAAAAAAAAAAAAAAAAAAAAAAHHHH
     responses:
-    - responseText: Hello
+    - responseText: Continue
       nextNode:
-        dialogueText: "Vad trevligt. Hoppas du m\xE5r bra."
+        dialogueText: THIS IS THE GOT DAMN BEST WAHOOO I DOOOO LOVE MEEE SOME DRINKIN.
+          WWOOOWWW
         responses:
-        - responseText: JA
+        - responseText: Continue
           nextNode:
-            dialogueText: "OK VAD BRA HEJD\xC5"
+            dialogueText: AAAAHHHH OH NO A CHILD AHHHH
             responses:
-            - responseText: Next
-              nextNode:
-                dialogueText: ' '
-                responses: []
-              sceneToLoad: 
-          sceneToLoad: 
-        - responseText: NEJ
-          nextNode:
-            dialogueText: "OK HEJD\xC5"
-            responses:
-            - responseText: "Hejd\xE5"
+            - responseText: Continue
               nextNode:
                 dialogueText: 
                 responses: []
               sceneToLoad: 
           sceneToLoad: 
-      sceneToLoad: 
-    - responseText: Goodbye
-      nextNode:
-        dialogueText: Welll, bye
-        responses:
-        - responseText: Next
-          nextNode:
-            dialogueText: 
-            responses: []
-          sceneToLoad: TESTSCENE
       sceneToLoad: 

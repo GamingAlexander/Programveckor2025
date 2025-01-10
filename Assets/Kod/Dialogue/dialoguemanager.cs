@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,8 +15,12 @@ public class DialogueManager : MonoBehaviour
     public Transform responseButtonContainer; // Container to hold response buttons
 
     [SerializeField] private float typingSpeed = 0.05f; // Delay between each character (adjustable)
+    [SerializeField] private float autoSkipDelay = 2.0f; // Delay before auto-skipping single choice
+    [SerializeField] private bool enableAutoSkip = true; // Toggle for auto-skip functionality
 
     private Coroutine typingCoroutine;
+    private DialogueNode currentNode; // To keep track of the current dialogue node
+    private string currentTitle; // To keep track of the current title
 
     private void Awake()
     {
@@ -35,14 +38,25 @@ public class DialogueManager : MonoBehaviour
         HideDialogue();
     }
 
+    private void Update()
+    {
+        // If there is only one response and Space is pressed
+        if (IsDialogueActive() && currentNode != null && currentNode.responses.Count == 1 && Input.GetKeyDown(KeyCode.Space))
+        {
+            SelectResponse(currentNode.responses[0], currentTitle);
+        }
+    }
+
     // Starts the dialogue with given title and dialogue node
     public void StartDialogue(string title, DialogueNode node)
     {
         // Display the dialogue UI
         ShowDialogue();
 
-        // Set dialogue title
+        // Set dialogue title and current node
         DialogTitleText.text = title;
+        currentNode = node;
+        currentTitle = title;
 
         // Stop any ongoing typing effect and clear text
         if (typingCoroutine != null)
@@ -79,6 +93,13 @@ public class DialogueManager : MonoBehaviour
             DialogBodyText.text += c;
             yield return new WaitForSeconds(typingSpeed); // Wait before adding next character
         }
+
+        // Auto-skip if there is only one response
+        if (enableAutoSkip && currentNode != null && currentNode.responses.Count == 1)
+        {
+            yield return new WaitForSeconds(autoSkipDelay);
+            SelectResponse(currentNode.responses[0], currentTitle);
+        }
     }
 
     // Handles response selection and triggers next dialogue node
@@ -92,7 +113,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         // Check if there's a follow-up node
-        if (!response.nextNode.IsLastNode())
+        if (response.nextNode != null && !response.nextNode.IsLastNode())
         {
             StartDialogue(title, response.nextNode); // Start next dialogue
         }
@@ -107,6 +128,7 @@ public class DialogueManager : MonoBehaviour
     public void HideDialogue()
     {
         DialogueParent.SetActive(false);
+        currentNode = null; // Reset current node
     }
 
     // Show the dialogue UI
