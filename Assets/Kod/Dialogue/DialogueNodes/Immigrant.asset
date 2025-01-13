@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Immigrant
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: "- oh yeah mmmm\u2026 "
+    dialogueText: "oh yeah mmmm\u2026"
     responses:
     - responseText: Continue
       nextNode:
-        dialogueText: '*BANG* What the hell...? '
+        dialogueText: '*BANG* What the hell...?'
         responses:
         - responseText: Continue
           nextNode:
-            dialogueText: "- No... No, no, no. This ain\u2019t real. "
+            dialogueText: "No... No, no, no. This ain\u2019t real. "
             responses:
             - responseText: Continue
               nextNode:
@@ -31,7 +31,11 @@ MonoBehaviour:
                 - responseText: Continue
                   nextNode:
                     dialogueText: "They\u2019re just people. Just scared people."
-                    responses: []
+                    responses:
+                    - responseText: Continue
+                      nextNode:
+                        dialogueText: 
+                      sceneToLoad: TESTSCENE
                   sceneToLoad: 
               sceneToLoad: 
           sceneToLoad: 

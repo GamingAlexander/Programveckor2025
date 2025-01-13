@@ -13,17 +13,16 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: "- Well, I\u2019ll be damned\u2026 she\u2019s runnin\u2019 lower\u2019n
+    dialogueText: "Well, I\u2019ll be damned\u2026 she\u2019s runnin\u2019 lower\u2019n
       a rattlesnake in a ditch. Dang it, Cliff, ya knew better than to skip that
       last fill-up. Guess I\u2019ll be makin\u2019 an unscheduled pit stop. "
     responses:
     - responseText: Continue
       nextNode:
-        dialogueText: "- Load\u2019s strapped down tighter\u2019n Aunt May\u2019s
-          Sunday corset, so at least that\u2019s somethin\u2019. Ain\u2019t no way
-          I\u2019m runnin\u2019 outta juice on a stretch like this, though. Better
-          start lookin\u2019 fer a station \u2018fore I\u2019m hoofin\u2019 it to
-          the nearest pump. "
+        dialogueText: "Load\u2019s strapped down tighter\u2019n Aunt May\u2019s Sunday
+          corset, so at least that\u2019s somethin\u2019. Ain\u2019t no way I\u2019m
+          runnin\u2019 outta juice on a stretch like this, though. Better start lookin\u2019
+          fer a station \u2018fore I\u2019m hoofin\u2019 it to the nearest pump. "
         responses:
         - responseText: Gas
           nextNode:
