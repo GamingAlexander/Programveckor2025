@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class drive : MonoBehaviour
 {
-    Rigidbody2D rb2d;
+    public Rigidbody2D rb2d;
     TruckSprite spriteHandler;
     [SerializeField] int driveForce;   
     bool driving = false;
@@ -13,6 +13,7 @@ public class drive : MonoBehaviour
     [SerializeField] float turnAngle;
     [SerializeField] int forceDoubler;
     [SerializeField] float autoTurn;
+    public bool offroad;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +24,22 @@ public class drive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (offroad)
+        {
+            driveForce = 4600;
+        }
+        else
+            driveForce = 5400;
+
         if(!Input.GetKey(KeyCode.LeftControl)) //ifall bromsen inte är tryckt
         {
             if (Input.GetKey(KeyCode.W))  
             {
-                if (rb2d.velocity.x > forceDoubler || rb2d.velocity.x < -forceDoubler || rb2d.velocity.y > forceDoubler || rb2d.velocity.y < -forceDoubler)
+                if (offroad == true)
+                {
+                    rb2d.AddForce(transform.up * driveForce * 0.8f * Time.deltaTime); //mindre hastighet ifall offroad;
+                }   
+                else if (rb2d.velocity.x > forceDoubler || rb2d.velocity.x < -forceDoubler || rb2d.velocity.y > forceDoubler || rb2d.velocity.y < -forceDoubler)
                 {
                     rb2d.AddForce(transform.up * driveForce * 2f * Time.deltaTime); //ifall man har mer än en viss hastighet så ökas kraften som ges, enkel acceleration
                 }

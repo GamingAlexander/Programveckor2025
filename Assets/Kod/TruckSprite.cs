@@ -7,11 +7,16 @@ public class TruckSprite : MonoBehaviour
     [SerializeField] Sprite[] sprites; // Array of 8 directional sprites
     [SerializeField] GameObject dragParticleEffectPrefab; // Prefab for drag particle effect
     [SerializeField] int particleWait;
+   
     int particleCounter = 0;
     bool left;
+    public bool drag = false;
+    
+    public float timerAudio;
 
     private Transform rotObj;
     private SpriteRenderer playerSprite;
+    PlayAudio audio;
 
     public int currentDirectionIndex = -1; // Keeps track of the current direction index
     private Rigidbody2D rb; // To track movement direction
@@ -23,6 +28,7 @@ public class TruckSprite : MonoBehaviour
         playerSprite = GetComponent<SpriteRenderer>();
         rotObj = transform.parent;
         rb = rotObj.GetComponent<Rigidbody2D>(); // Ensure the parent has a Rigidbody2D
+        audio = transform.parent.GetChild(1).GetComponent<PlayAudio>();
     }
 
     void Update()
@@ -34,7 +40,7 @@ public class TruckSprite : MonoBehaviour
 
     void FixedUpdate()
     {
-        CheckForDragParticles();
+        DragUpdate();
     }
 
     void UpdateSpriteBasedOnRotation()
@@ -61,18 +67,13 @@ public class TruckSprite : MonoBehaviour
         }
     }
 
-    void CheckForDragParticles()
+    void DragUpdate()
     {
-        
-
         if (rotObj.GetComponent<drive>().backing)
         {
             return;
         }
-        if (dragParticleEffectPrefab == null || rb == null)
-        {
-            return;
-        }
+ 
             
 
         // Get the forward direction based on the sprite direction
@@ -87,22 +88,25 @@ public class TruckSprite : MonoBehaviour
         {
             return;
         }
+       
         if (rotObj.GetComponent<drive>().bracking)
         {
-            TireParticle(0.9f);
+            TireDrag(0.9f);
+           
             return;
         }
             
         // Calculate misalignment angle
         float angleDifference = Vector2.Angle(forwardDirection, velocityDirection);
 
-        // Debug log for angle difference
-        // Debug.Log($"Angle Difference: {angleDifference}, Velocity Magnitude: {velocity.magnitude}");
-
         // Spawn particles if misalignment is significant
         if (angleDifference > 20f && Random.value <= 0.8f) // Adjust the threshold as needed
         {
-            TireParticle(0.7f);
+            TireDrag(0.7f);
+        }
+        else
+        {
+            timerAudio -= Time.deltaTime;
         }
         
     }
@@ -124,21 +128,28 @@ public class TruckSprite : MonoBehaviour
         }
     }
 
-    private void TireParticle(float chance)
+    private void TireDrag(float chance)
     {
-        float spred = 0.3f;
+        
+        if (timerAudio <= 0)
+        {
+            audio.playAudio(0);
+            timerAudio = 0.5f;
+        }
+        float spred = 0.15f;
         float offset = 0;
         if (currentDirectionIndex == 2 || currentDirectionIndex == 3 || currentDirectionIndex == 1)
         {
-            offset = -0.5f;
+            offset = -0.25f;
         }
         if (currentDirectionIndex == 5 || currentDirectionIndex == 6 || currentDirectionIndex == 7)
         {
-            offset = 0.5f;
+            offset = 0.25f;
         }
         
         CreateParticles(spred + offset, chance);
         CreateParticles(-spred + offset, chance);
+        drag = true;
     }
 
     private void CreateParticles(float pos, float chance)
@@ -147,7 +158,7 @@ public class TruckSprite : MonoBehaviour
         {
             if (Random.Range(0, 1) <= chance)
             {
-                Instantiate(dragParticleEffectPrefab, transform.position + rotObj.up * -1.2f + rotObj.right * pos, rotObj.transform.rotation);
+                Instantiate(dragParticleEffectPrefab, transform.position + rotObj.up * -0.6f + rotObj.right * pos, rotObj.transform.rotation);
                 if (left)
                 {
                     left = false;
