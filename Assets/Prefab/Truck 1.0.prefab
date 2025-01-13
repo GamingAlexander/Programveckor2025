@@ -107,6 +107,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d85037615922c054db9ccaf1b9493aaf, type: 3}
   - {fileID: 21300000, guid: 7dcac4fb183f2c44eb411a1556f10963, type: 3}
   dragParticleEffectPrefab: {fileID: 9183460510332273932, guid: 7ca5f66b4608af7458eded20e15de153, type: 3}
+  particleWait: 0
   currentDirectionIndex: -1
 --- !u!1 &7158239552581784906
 GameObject:
@@ -237,6 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   driveForce: 5400
+  backing: 0
+  bracking: 0
   turnAngle: 175
   forceDoubler: 2
   autoTurn: 4
@@ -283,7 +286,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.78}
+  m_Size: {x: 1, y: 2.8}
   m_EdgeRadius: 0
 --- !u!114 &7042639216269822019
 MonoBehaviour:
