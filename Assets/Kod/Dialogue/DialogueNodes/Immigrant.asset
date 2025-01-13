@@ -30,12 +30,8 @@ MonoBehaviour:
                 responses:
                 - responseText: Continue
                   nextNode:
-                    dialogueText: "They\u2019re just people. Just scared people. "
-                    responses:
-                    - responseText: Continue
-                      nextNode:
-                        dialogueText: 
-                      sceneToLoad: 
+                    dialogueText: "They\u2019re just people. Just scared people."
+                    responses: []
                   sceneToLoad: 
               sceneToLoad: 
           sceneToLoad: 
