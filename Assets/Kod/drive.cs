@@ -80,13 +80,18 @@ public class drive : MonoBehaviour
                 rb2d.Sleep();
             }
         }
-        for (int i = 0; i < 7; i++)
+
+        if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {
-            if (spriteHandler.currentDirectionIndex == i)
+            for (int i = 0; i < 7; i++)
             {
-                SetAngle(Mathf.LerpAngle(transform.eulerAngles.z, i * 45, autoTurn * Time.deltaTime));
+                if (spriteHandler.currentDirectionIndex == i)
+                {
+                    SetAngle(Mathf.LerpAngle(transform.eulerAngles.z, i * 45, autoTurn * Time.deltaTime));
+                }
             }
         }
+         
        
     }
     private void SetAngle(float Z)
