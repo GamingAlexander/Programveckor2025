@@ -80,31 +80,17 @@ public class drive : MonoBehaviour
                 rb2d.Sleep();
             }
         }
-
-        if (spriteHandler.currentDirectionIndex == 0) //ifall sprite är norr 
+        for (int i = 0; i < 7; i++)
         {
-            Debug.Log("fix north");
-            float newAngle = Mathf.LerpAngle(transform.eulerAngles.z, 0, autoTurn * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(0, 0, newAngle);
+            if (spriteHandler.currentDirectionIndex == i)
+            {
+                SetAngle(Mathf.LerpAngle(transform.eulerAngles.z, i * 45, autoTurn * Time.deltaTime));
+            }
         }
-        if (spriteHandler.currentDirectionIndex == 2) //ifall sprite är öst
-        {
-            Debug.Log("fix east");
-            float newAngle = Mathf.LerpAngle(transform.eulerAngles.z, 90, autoTurn * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(0, 0, newAngle);
-        }
-        if (spriteHandler.currentDirectionIndex == 4) //ifall sprite är syd
-        {
-            Debug.Log("fix south");
-            float newAngle = Mathf.LerpAngle(transform.eulerAngles.z, 180, autoTurn * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(0, 0, newAngle);
-        }
-        if (spriteHandler.currentDirectionIndex == 6) //ifall sprite är väst
-        {
-            Debug.Log("fix west");
-            float newAngle = Mathf.LerpAngle(transform.eulerAngles.z, 270, autoTurn * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(0, 0, newAngle);
-        }
-
+       
+    }
+    private void SetAngle(float Z)
+    {
+        transform.rotation = Quaternion.Euler(0, 0, Z);
     }
 }

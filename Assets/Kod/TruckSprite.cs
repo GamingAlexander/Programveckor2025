@@ -6,11 +6,16 @@ public class TruckSprite : MonoBehaviour
 {
     [SerializeField] Sprite[] sprites; // Array of 8 directional sprites
     [SerializeField] GameObject dragParticleEffectPrefab; // Prefab for drag particle effect
+    [SerializeField] int particleWait;
+    int particleCounter = 0;
+    bool left;
+
     private Transform rotObj;
     private SpriteRenderer playerSprite;
 
     public int currentDirectionIndex = -1; // Keeps track of the current direction index
     private Rigidbody2D rb; // To track movement direction
+    
 
     // Start is called before the first frame update
     void Start()
@@ -97,7 +102,7 @@ public class TruckSprite : MonoBehaviour
         // Spawn particles if misalignment is significant
         if (angleDifference > 20f && Random.value <= 0.8f) // Adjust the threshold as needed
         {
-            TireParticle(0.6f);
+            TireParticle(0.7f);
         }
         
     }
@@ -138,10 +143,27 @@ public class TruckSprite : MonoBehaviour
 
     private void CreateParticles(float pos, float chance)
     {
-        if (Random.value <= chance)
+        if (particleCounter == particleWait)
         {
-            Instantiate(dragParticleEffectPrefab, transform.position + rotObj.up * -1.2f + rotObj.right * pos, rotObj.transform.rotation);
+            if (Random.Range(0, 1) <= chance)
+            {
+                Instantiate(dragParticleEffectPrefab, transform.position + rotObj.up * -1.2f + rotObj.right * pos, rotObj.transform.rotation);
+                if (left)
+                {
+                    left = false;
+                    particleCounter = 0;
+                }
+                else
+                {
+                    left = true;
+                }
+            }
         }
+        else
+        {
+            particleCounter++;
+        }
+        
     }
 }
 

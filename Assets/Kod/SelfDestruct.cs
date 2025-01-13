@@ -6,7 +6,7 @@ public class SelfDestruct : MonoBehaviour
 {
     public float deathTimer;
 
-    private void Start()
+    public virtual void Start()
     {
         Destroy(gameObject, deathTimer);
     }
