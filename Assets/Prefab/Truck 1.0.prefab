@@ -140,8 +140,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1728927326300790725}
   m_Father: {fileID: 0}
@@ -210,8 +210,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 13
-  m_LinearDrag: 3
+  m_Mass: 14
+  m_LinearDrag: 3.5
   m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -237,12 +237,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1b0bac3bdacef49a5392b85db85b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2d: {fileID: 0}
   driveForce: 5400
   backing: 0
   bracking: 0
-  turnAngle: 175
+  turnAngle: 125
   forceDoubler: 2
   autoTurn: 4
+  offroad: 0
 --- !u!61 &5097075695343011719
 BoxCollider2D:
   m_ObjectHideFlags: 0
