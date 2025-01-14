@@ -21,11 +21,14 @@ EditorBuildSettings:
     path: Assets/Kod/Dialogue/DialogueScene/GasstationTest.unity
     guid: f271b244c170ac745b0e56e8f5575b2f
   - enabled: 1
-    path: Assets/Kod/Dialogue/DialogueScene/Immigranttest.unity
+    path: Assets/Kod/Dialogue/DialogueScene/BarTest.unity
     guid: b0069c3c57f0d8b48835f972ef3c3c97
   - enabled: 1
     path: Assets/Scenes/RIKTIG - Mack.unity
     guid: 6bcb8ff6c0ad7c14686fbef1bcf4bafa
+  - enabled: 1
+    path: Assets/Scenes/RIKTIG - Bar.unity
+    guid: 3f47190ba705c9049be726a7ea5768d0
   - enabled: 1
     path: Assets/Prefab/hund.unity
     guid: 876510041eff896449d4c91c4ba0f6cf
