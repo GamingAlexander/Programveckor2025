@@ -21,5 +21,12 @@ public class cameraScripty : MonoBehaviour
         camTarget.x = truck.transform.position.x;
         camTarget.y = truck.transform.position.y;
         transform.position = Vector3.Lerp(transform.position, camTarget, moveSpeed * Time.deltaTime);
+
+        if (truck.GetComponent<Rigidbody2D>().velocity.y > truck.GetComponent<Rigidbody2D>().velocity.x)
+        {
+            moveSpeed = 5;
+        }
+        else
+            moveSpeed = 2;
     }
 }

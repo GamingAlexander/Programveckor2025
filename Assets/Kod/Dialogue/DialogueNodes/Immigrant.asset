@@ -36,7 +36,12 @@ MonoBehaviour:
                       nextNode:
                         dialogueText: 
                       sceneToLoad: TESTSCENE
+                      animationTrigger: 
                   sceneToLoad: 
+                  animationTrigger: 
               sceneToLoad: 
+              animationTrigger: 
           sceneToLoad: 
+          animationTrigger: 
       sceneToLoad: 
+      animationTrigger: Drink

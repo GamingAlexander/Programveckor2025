@@ -37,9 +37,12 @@ MonoBehaviour:
                     - responseText: Continue
                       nextNode:
                         dialogueText: 
-                      sceneToLoad: TESTSCENE
+                      sceneToLoad: RIKTIG - Start
+                      animationTrigger: 
                   sceneToLoad: 
+                  animationTrigger: Scroll
               sceneToLoad: 
+              animationTrigger: 
             - responseText: I'm in
               nextNode:
                 dialogueText: I'm in!
@@ -51,9 +54,12 @@ MonoBehaviour:
                     - responseText: Continue
                       nextNode:
                         dialogueText: 
-                      sceneToLoad: TESTSCENE
+                      sceneToLoad: RIKTIG - Start
+                      animationTrigger: 
                   sceneToLoad: 
+                  animationTrigger: Scroll
               sceneToLoad: 
+              animationTrigger: 
             - responseText: Huckleberry
               nextNode:
                 dialogueText: "I\u2019m yer huckleberry."
@@ -65,9 +71,12 @@ MonoBehaviour:
                     - responseText: Continue
                       nextNode:
                         dialogueText: 
-                      sceneToLoad: TESTSCENE
+                      sceneToLoad: RIKTIG - Start
+                      animationTrigger: 
                   sceneToLoad: 
+                  animationTrigger: Scroll
               sceneToLoad: 
+              animationTrigger: 
             - responseText: Load me
               nextNode:
                 dialogueText: Load me up and make me ready *wink* Consider it done!
@@ -79,8 +88,13 @@ MonoBehaviour:
                     - responseText: Continue
                       nextNode:
                         dialogueText: 
-                      sceneToLoad: TESTSCENE
+                      sceneToLoad: RIKTIG - Start
+                      animationTrigger: 
                   sceneToLoad: 
+                  animationTrigger: Scroll
               sceneToLoad: 
+              animationTrigger: 
           sceneToLoad: 
+          animationTrigger: Scroll
       sceneToLoad: 
+      animationTrigger: 

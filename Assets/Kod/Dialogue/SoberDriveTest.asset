@@ -18,20 +18,30 @@ MonoBehaviour:
     - responseText: Continue
       nextNode:
         dialogueText: 
-        responses: []
+        responses:
+        - responseText: 
+          nextNode:
+            dialogueText: 
+            responses: []
+          sceneToLoad: 
+          animationTrigger: 
       sceneToLoad: 
+      animationTrigger: 
     - responseText: Continue
       nextNode:
         dialogueText: 
         responses: []
       sceneToLoad: 
+      animationTrigger: 
     - responseText: Continue
       nextNode:
         dialogueText: 
         responses: []
       sceneToLoad: 
+      animationTrigger: 
     - responseText: Continue
       nextNode:
         dialogueText: 
         responses: []
       sceneToLoad: 
+      animationTrigger: 

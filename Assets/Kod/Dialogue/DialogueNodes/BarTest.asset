@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff038411e4daab4ebd5c814a131b0fd, type: 3}
+  m_Name: BarTest
+  m_EditorClassIdentifier: 
+  RootNode:
+    dialogueText: "\"Well, howdy there, stranger. Ain\u2019t seen your face \u2018round
+      these parts before. What brings ya to Rusty Nail Saloon? Business, pleasure,
+      or just lookin\u2019 to wet yer whistle?\""
+    responses:
+    - responseText: Continue
+      nextNode:
+        dialogueText: "Evenin\u2019. Could say I\u2019m a bit of all three. Reckon
+          I could use a drink first, though. What\u2019s good here?"
+        responses:
+        - responseText: Continue
+          nextNode:
+            dialogueText: '"Here take this!"'
+            responses:
+            - responseText: Drink
+              nextNode:
+                dialogueText: Thanks mister.
+                responses:
+                - responseText: Continue
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+                  sceneToLoad: 
+                  animationTrigger: 
+              sceneToLoad: 
+              animationTrigger: Drink
+            - responseText: No
+              nextNode:
+                dialogueText: No, I changed my mind
+                responses:
+                - responseText: Continue
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+                  sceneToLoad: 
+                  animationTrigger: 
+              sceneToLoad: 
+              animationTrigger: 
+          sceneToLoad: 
+          animationTrigger: 
+      sceneToLoad: 
+      animationTrigger: 

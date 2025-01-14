@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance { get; private set; }
 
     // UI references
+    public GameObject sceneAnimation;
     public GameObject DialogueParent; // Main container for dialogue UI
     public TextMeshProUGUI DialogTitleText, DialogBodyText; // Text components for title and body
     public GameObject responseButtonPrefab; // Prefab for generating response buttons
@@ -105,6 +106,16 @@ public class DialogueManager : MonoBehaviour
     // Handles response selection and triggers next dialogue node
     public void SelectResponse(DialogueResponse response, string title)
     {
+        // Trigger animation if specified
+        if (!string.IsNullOrEmpty(response.animationTrigger))
+        {
+            Animator animator = sceneAnimation.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetTrigger(response.animationTrigger);
+            }
+        }
+
         // Check if there's a scene to load
         if (!string.IsNullOrEmpty(response.sceneToLoad))
         {
