@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113379005}
   - component: {fileID: 113379004}
+  - component: {fileID: 113379006}
   m_Layer: 0
   m_Name: ILastbilStill
   m_TagString: Untagged
@@ -206,6 +207,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &113379006
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113379003}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a6f4b27c79e63e4ba3b6fb8c981d990, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &367156513
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe2121666bd4ef4aac0de57150d0aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneAnimation: {fileID: 113379003}
   DialogueParent: {fileID: 1558286012}
   DialogTitleText: {fileID: 1421058138}
   DialogBodyText: {fileID: 1542244246}
