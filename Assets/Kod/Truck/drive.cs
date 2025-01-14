@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class drive : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class drive : MonoBehaviour
         else
             driveForce = 5400;
 
-        if(!Input.GetKey(KeyCode.LeftControl)) //ifall bromsen inte är tryckt
+        if(!Input.GetKey(KeyCode.LeftControl) && SceneManager.GetActiveScene().name != "RIKTIG - Drunk") //ifall bromsen inte är tryckt och man inte är full
         {
             if (Input.GetKey(KeyCode.W))  
             {
@@ -65,15 +66,18 @@ public class drive : MonoBehaviour
             }
             bracking = false;
         }
-
-        if(Input.GetKey(KeyCode.A)) //svänga vänster och höger
+        if(SceneManager.GetActiveScene().name == "RIKTIG - Drunk" && spriteHandler.currentDirectionIndex == 6 || SceneManager.GetActiveScene().name != "RIKTIG - Drunk")
         {
-            transform.Rotate(0, 0, turnAngle * Time.deltaTime);
+            if (Input.GetKey(KeyCode.A)) //svänga vänster och höger
+            {
+                transform.Rotate(0, 0, turnAngle * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Rotate(0, 0, -turnAngle * Time.deltaTime);
+            }
         }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Rotate(0, 0, -turnAngle * Time.deltaTime);
-        }
+        
 
         if (Input.GetKey(KeyCode.LeftControl)) //bromsen
         {
