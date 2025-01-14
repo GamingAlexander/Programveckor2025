@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RIKTIG - Mack.unity
     guid: 6bcb8ff6c0ad7c14686fbef1bcf4bafa
+  - enabled: 1
+    path: Assets/Scenes/RIKTIG - Start.unity
+    guid: 4a093455bc28e704a927c155db119328
   m_configObjects: {}
