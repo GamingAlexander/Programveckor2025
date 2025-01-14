@@ -26,12 +26,30 @@ MonoBehaviour:
           nextNode:
             dialogueText: '"Here take this!"'
             responses:
-            - responseText: Thanks mister.
+            - responseText: Drink
               nextNode:
-                dialogueText: Continue
-                responses: []
+                dialogueText: Thanks mister.
+                responses:
+                - responseText: Continue
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+                  sceneToLoad: 
+                  animationTrigger: 
               sceneToLoad: 
               animationTrigger: Drink
+            - responseText: No
+              nextNode:
+                dialogueText: No, I changed my mind
+                responses:
+                - responseText: Continue
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+                  sceneToLoad: 
+                  animationTrigger: 
+              sceneToLoad: 
+              animationTrigger: 
           sceneToLoad: 
           animationTrigger: 
       sceneToLoad: 
