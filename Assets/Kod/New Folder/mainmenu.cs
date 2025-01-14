@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Waiting for fade-out to complete...");
         yield return new WaitForSeconds(fadeDuration);
-        SceneManager.LoadScene("GasstationTest");
+        SceneManager.LoadScene("RIKTIG - ILASTBIL");
     }
 
     public void QuitGame()
