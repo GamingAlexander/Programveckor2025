@@ -40,18 +40,6 @@ public class CompletedEndings : MonoBehaviour
 
     private void Update() //temp
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            CompleteEndning(1);
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            CompleteEndning(2);
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            CompleteEndning(3);
-        }
         if (Input.GetKeyDown(KeyCode.R))
         {
             resetCompletedEndings();
