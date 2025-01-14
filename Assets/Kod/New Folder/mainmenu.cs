@@ -1,33 +1,33 @@
-using System.Collections; // For IEnumerator
-using UnityEngine; // For Unity-specific functionality
-using UnityEngine.SceneManagement; // For SceneManager
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private Animator fadeAnimator; // Assign your FadeScreen Animator in the Inspector
-    [SerializeField] private float fadeDuration = 1f; // Set fade animation duration (match it with your Animator)
+    [SerializeField] private Animator fadeAnimator; // Attach your FadeScreen Animator
+    [SerializeField] private float fadeDuration = 1f; // Match this to the length of the animation
 
+    private void Start()
+    {
+        DontDestroyOnLoad(fadeAnimator.gameObject);
+    }
     public void PlayGame()
     {
         Debug.Log("PlayGame button clicked!");
-        StartCoroutine(FadeAndLoadScene());
+        fadeAnimator.SetTrigger("FadeIn"); // Ensure this matches the trigger in Animator
+        StartCoroutine(LoadSceneAfterFade());
     }
 
-    public void Quit()
+    private IEnumerator LoadSceneAfterFade()
     {
-        Debug.Log("Quitting the game...");
-        Application.Quit();
-    }
-
-    private IEnumerator FadeAndLoadScene()
-    {
-        // Trigger the fade-to-black animation
-        fadeAnimator.SetTrigger("LowTaperFade1");
-
-        // Wait for the fade animation to complete
+        Debug.Log("Waiting for fade-out to complete...");
         yield return new WaitForSeconds(fadeDuration);
+        SceneManager.LoadScene("Immigranttest");
+    }
 
-        // Load the next scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    public void QuitGame()
+    {
+        Debug.Log("QuitGame button clicked!");
+        Application.Quit();
     }
 }
