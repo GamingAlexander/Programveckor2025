@@ -34,7 +34,7 @@ MonoBehaviour:
                   nextNode:
                     dialogueText: 
                     responses: []
-                  sceneToLoad: 
+                  sceneToLoad: menu_Casper
                   animationTrigger: 
               sceneToLoad: 
               animationTrigger: Drink
@@ -48,7 +48,7 @@ MonoBehaviour:
                     responses: []
                   sceneToLoad: 
                   animationTrigger: 
-              sceneToLoad: 
+              sceneToLoad: menu_Casper
               animationTrigger: 
           sceneToLoad: 
           animationTrigger: 
