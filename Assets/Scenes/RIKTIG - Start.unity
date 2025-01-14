@@ -20718,6 +20718,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4840453864769451013, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: autoTurn
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6347483697608726052, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: m_Name
       value: Truck 2.0 Variant
