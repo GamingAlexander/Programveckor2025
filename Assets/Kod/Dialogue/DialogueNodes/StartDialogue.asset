@@ -37,10 +37,10 @@ MonoBehaviour:
                     - responseText: Continue
                       nextNode:
                         dialogueText: 
-                      sceneToLoad: TESTSCENE
+                      sceneToLoad: RIKTIG - Start
                       animationTrigger: 
                   sceneToLoad: 
-                  animationTrigger: 
+                  animationTrigger: Scroll
               sceneToLoad: 
               animationTrigger: 
             - responseText: I'm in
@@ -54,10 +54,10 @@ MonoBehaviour:
                     - responseText: Continue
                       nextNode:
                         dialogueText: 
-                      sceneToLoad: TESTSCENE
+                      sceneToLoad: RIKTIG - Start
                       animationTrigger: 
                   sceneToLoad: 
-                  animationTrigger: 
+                  animationTrigger: Scroll
               sceneToLoad: 
               animationTrigger: 
             - responseText: Huckleberry
@@ -71,10 +71,10 @@ MonoBehaviour:
                     - responseText: Continue
                       nextNode:
                         dialogueText: 
-                      sceneToLoad: TESTSCENE
+                      sceneToLoad: RIKTIG - Start
                       animationTrigger: 
                   sceneToLoad: 
-                  animationTrigger: 
+                  animationTrigger: Scroll
               sceneToLoad: 
               animationTrigger: 
             - responseText: Load me
@@ -88,10 +88,10 @@ MonoBehaviour:
                     - responseText: Continue
                       nextNode:
                         dialogueText: 
-                      sceneToLoad: TESTSCENE
+                      sceneToLoad: RIKTIG - Start
                       animationTrigger: 
                   sceneToLoad: 
-                  animationTrigger: 
+                  animationTrigger: Scroll
               sceneToLoad: 
               animationTrigger: 
           sceneToLoad: 
