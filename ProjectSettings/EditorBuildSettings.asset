@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RIKTIG - Mack.unity
     guid: 6bcb8ff6c0ad7c14686fbef1bcf4bafa
+  - enabled: 1
+    path: Assets/Prefab/hund.unity
+    guid: 876510041eff896449d4c91c4ba0f6cf
   m_configObjects: {}
