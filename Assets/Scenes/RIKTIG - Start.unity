@@ -727,63 +727,6 @@ Transform:
   - {fileID: 15606969}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &430788854
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -36.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -11.991734
-      objectReference: {fileID: 0}
-    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7158239552581784906, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
-      propertyPath: m_Name
-      value: Truck 1.0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
 --- !u!1 &681861765
 GameObject:
   m_ObjectHideFlags: 0
@@ -20727,6 +20670,63 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1001 &730968551
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -60.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -14.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347483697608726052, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: m_Name
+      value: Truck 2.0 Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
 --- !u!1 &817990643
 GameObject:
   m_ObjectHideFlags: 0
@@ -21113,8 +21113,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2145788366}
-  - {fileID: 430788854}
   - {fileID: 817990645}
   - {fileID: 1210551637}
   - {fileID: 32842045}
   - {fileID: 23886250}
+  - {fileID: 730968551}
