@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Cliff Barton XI
-  Dialogue: {fileID: 11400000, guid: 440036b44cc6c60438e5dbdf672ffbbf, type: 2}
+  Dialogue: {fileID: 11400000, guid: 55380b65547e33a45bd041ac38efef04, type: 2}
 --- !u!4 &142721811
 Transform:
   m_ObjectHideFlags: 0
@@ -606,6 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe2121666bd4ef4aac0de57150d0aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneAnimation: {fileID: 1494988758}
   DialogueParent: {fileID: 209044827}
   DialogTitleText: {fileID: 1592761277}
   DialogBodyText: {fileID: 1009967747}
@@ -639,6 +640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1494988760}
   - component: {fileID: 1494988759}
+  - component: {fileID: 1494988761}
   m_Layer: 0
   m_Name: BarStill
   m_TagString: Untagged
@@ -713,6 +715,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1494988761
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494988758}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d6dd2c8196cf0db42ad1e63d1dd7b14e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1579257136
 GameObject:
   m_ObjectHideFlags: 0

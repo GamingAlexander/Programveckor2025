@@ -1,7 +1,8 @@
 [System.Serializable]
 public class DialogueResponse
 {
-    public string responseText; // Texten för detta val
-    public DialogueNode nextNode; // Nästa nod för dialogen
-    public string sceneToLoad; // Namnet på scenen att ladda (lämna tomt om ingen scenbyte ska ske)
+    public string responseText; // Text for the response
+    public DialogueNode nextNode; // Next dialogue node
+    public string sceneToLoad; // Scene to load if applicable
+    public string animationTrigger; // Animation trigger (leave empty if none)
 }
