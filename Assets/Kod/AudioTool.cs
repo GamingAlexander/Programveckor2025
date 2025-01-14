@@ -4,42 +4,73 @@ using UnityEngine;
 
 public class AudioTool : MonoBehaviour
 {
-    AudioSource source;
+    [SerializeField] AudioSource[] sources;
     public float audioSpeed;
-    bool fadeIn;
-    bool fadeOut;
+    public bool complete = false;
+    bool[] fadeIn;
+    bool[] fadeOut;
+   
 
     private void Start()
     {
-        source = GetComponent<AudioSource>();
+        fadeIn = new bool[sources.Length];
+        fadeOut = new bool[sources.Length];
+        FadeInAudio(0);
     }
     private void Update()
     {
-        if (source.volume > 0 && fadeOut)
+        for (int i = 0; i < sources.Length; i++)
         {
-            source.volume -= Time.deltaTime;
+            FadingOut(i);
+        }
+        for (int i = 0; i < sources.Length; i++)
+        {
+            FadingIn(i);
+        }
+    }
+    private void FadingOut(int index)
+    {
+        if (sources[index].volume > 0 && fadeOut[index])
+        {
+            sources[index].volume -= Time.deltaTime;
         }
         else
         {
-            fadeOut = false;
+            fadeOut[index] = false;
         }
-        if (source.volume < 2 && fadeIn)
+    }
+    private void FadingIn(int index)
+    {
+        if (sources[index].volume < 1 && fadeIn[index])
         {
-            source.volume += Time.deltaTime;
+            sources[index].volume += Time.deltaTime;
         }
         else
         {
-            fadeIn = false;
+            fadeIn[index] = false;
         }
     }
-    public void FadeOutAudio()
+    public void FadeOutAudio(int index)
     {
-        fadeOut = true;
-        fadeIn = false;
+        fadeOut[index] = true;
     }
-    public void FadeInAudio()
+    public void FadeInAudio(int index)
     {
-        fadeOut = false;
-        fadeIn = true;
+        fadeIn[index] = true;
+    }
+    public void FadeOutAllAudio()
+    {
+        for (int i = 0; i < sources.Length; i++)
+        {
+            fadeOut[i] = true;
+        }
+
+    }
+    public void FadeInAllAudio()
+    {
+        for (int i = 0; i < sources.Length; i++)
+        {
+            fadeIn[i] = true;
+        }
     }
 }

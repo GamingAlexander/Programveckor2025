@@ -6,7 +6,7 @@ public class drive : MonoBehaviour
 {
     public Rigidbody2D rb2d;
     TruckSprite spriteHandler;
-    [SerializeField] int driveForce;   
+    public float driveForce;   
     bool driving = false;
     public bool backing;
     public bool bracking;
