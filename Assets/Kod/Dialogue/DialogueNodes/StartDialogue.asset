@@ -38,8 +38,11 @@ MonoBehaviour:
                       nextNode:
                         dialogueText: 
                       sceneToLoad: TESTSCENE
+                      animationTrigger: 
                   sceneToLoad: 
+                  animationTrigger: 
               sceneToLoad: 
+              animationTrigger: 
             - responseText: I'm in
               nextNode:
                 dialogueText: I'm in!
@@ -52,8 +55,11 @@ MonoBehaviour:
                       nextNode:
                         dialogueText: 
                       sceneToLoad: TESTSCENE
+                      animationTrigger: 
                   sceneToLoad: 
+                  animationTrigger: 
               sceneToLoad: 
+              animationTrigger: 
             - responseText: Huckleberry
               nextNode:
                 dialogueText: "I\u2019m yer huckleberry."
@@ -66,8 +72,11 @@ MonoBehaviour:
                       nextNode:
                         dialogueText: 
                       sceneToLoad: TESTSCENE
+                      animationTrigger: 
                   sceneToLoad: 
+                  animationTrigger: 
               sceneToLoad: 
+              animationTrigger: 
             - responseText: Load me
               nextNode:
                 dialogueText: Load me up and make me ready *wink* Consider it done!
@@ -80,7 +89,12 @@ MonoBehaviour:
                       nextNode:
                         dialogueText: 
                       sceneToLoad: TESTSCENE
+                      animationTrigger: 
                   sceneToLoad: 
+                  animationTrigger: 
               sceneToLoad: 
+              animationTrigger: 
           sceneToLoad: 
+          animationTrigger: Scroll
       sceneToLoad: 
+      animationTrigger: 
