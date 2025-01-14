@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(fadeAnimator.gameObject);
+      
     }
     public void PlayGame()
     {
@@ -22,7 +23,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Waiting for fade-out to complete...");
         yield return new WaitForSeconds(fadeDuration);
-        SceneManager.LoadScene("Immigranttest");
+        SceneManager.LoadScene("GasstationTest");
     }
 
     public void QuitGame()
