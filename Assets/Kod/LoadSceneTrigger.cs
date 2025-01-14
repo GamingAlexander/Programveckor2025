@@ -7,6 +7,7 @@ public class LoadSceneTrigger : MonoBehaviour
 {
     [SerializeField] string sceneName;
     [SerializeField] AudioTool audioManager;
+    [SerializeField] DarkScreen screen;
     drive truck;
     public float wait;
     float timer;
@@ -17,9 +18,10 @@ public class LoadSceneTrigger : MonoBehaviour
     {
         print("trigger Scene");
         truck = collision.GetComponent<drive>();
-        truck.driveForce = 0;
-        truck.rb2d.velocity = truck.rb2d.velocity / 2;
+
+
         audioManager.FadeOutAllAudio();
+        screen.ScreenFadeOut();
         timer = wait;
         active = true;
     }
@@ -28,6 +30,7 @@ public class LoadSceneTrigger : MonoBehaviour
     {
         if (active)
         {
+            truck.driveForce = 0;
             truck.rb2d.velocity *= 0.95f;
 
             if (timer > 0)
