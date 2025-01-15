@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: GasStation
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: "There she is. Gas station at the end o\u2019 the rainbow. Let\u2019s
-      hope I don\u2019t need to sell a kidney to fill ya up. "
+    dialogueText: Damn... this ain't it chief...
     responses:
     - responseText: Continue
       nextNode:
@@ -32,6 +31,9 @@ MonoBehaviour:
               nextNode:
                 dialogueText: 
                 responses: []
-              sceneToLoad: TESTSCENE
+              sceneToLoad: RIKTIG - Start
+              animationTrigger: 
           sceneToLoad: 
+          animationTrigger: 
       sceneToLoad: 
+      animationTrigger: 

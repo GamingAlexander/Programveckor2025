@@ -23,6 +23,8 @@ public class DialogueManager : MonoBehaviour
     private DialogueNode currentNode; // To keep track of the current dialogue node
     private string currentTitle; // To keep track of the current title
 
+    private bool isTyping; // To check if the text is being typed
+
     private void Awake()
     {
         // Singleton pattern to ensure only one instance of DialogueManager
@@ -41,10 +43,18 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        // If there is only one response and Space is pressed
-        if (IsDialogueActive() && currentNode != null && currentNode.responses.Count == 1 && Input.GetKeyDown(KeyCode.Space))
+        if (IsDialogueActive() && Input.GetKeyDown(KeyCode.Space))
         {
-            SelectResponse(currentNode.responses[0], currentTitle);
+            if (isTyping)
+            {
+                // If text is being typed, complete it immediately
+                FinishTyping();
+            }
+            else if (currentNode != null && currentNode.responses.Count == 1)
+            {
+                // If typing is finished and there is only one response, select it
+                SelectResponse(currentNode.responses[0], currentTitle);
+            }
         }
     }
 
@@ -88,12 +98,16 @@ public class DialogueManager : MonoBehaviour
     // Coroutine to type text letter by letter
     private IEnumerator TypeText(string text)
     {
+        isTyping = true;
         DialogBodyText.text = ""; // Clear the text before starting
+
         foreach (char c in text)
         {
             DialogBodyText.text += c;
             yield return new WaitForSeconds(typingSpeed); // Wait before adding next character
         }
+
+        isTyping = false;
 
         // Auto-skip if there is only one response
         if (enableAutoSkip && currentNode != null && currentNode.responses.Count == 1)
@@ -101,6 +115,19 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(autoSkipDelay);
             SelectResponse(currentNode.responses[0], currentTitle);
         }
+    }
+
+    // Immediately finish typing the text
+    private void FinishTyping()
+    {
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+        }
+
+        // Display the full text immediately
+        DialogBodyText.text = currentNode.dialogueText;
+        isTyping = false;
     }
 
     // Handles response selection and triggers next dialogue node
