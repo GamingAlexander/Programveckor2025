@@ -1,56 +1,42 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FadeOutScreen : MonoBehaviour
+public class FadeInScreen : MonoBehaviour
 {
-    bool FadeOut = false;
-    Image sprite;
+    private bool fadeIn = false;
+    private Image sprite;
+    private float fadeSpeed = 1f; // Hastighet på faderingen
     Canvas canvas;
-    float fadeSpeed = 1f; // Hastighet på faderingen
 
     private void Start()
     {
+        canvas = GetComponentInParent<Canvas>();
         sprite = GetComponent<Image>();
-        canvas = GetComponentInParent<Canvas>(); // Hämta canvas-komponenten från föräldern
+
+        // Sätt initial alpha till 0 (osynlig)
+        sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (fadeIn)
         {
-            canvas.sortingOrder = 1;
-            StartFadeOut();
-        }
-        if (FadeOut)
-        {
-            // Minska alpha för att göra bilden mer transparent
-            sprite.color -= new Color(0, 0, 0, fadeSpeed * Time.deltaTime);
+            // Öka alpha för att göra bilden mer synlig
+            sprite.color += new Color(0, 0, 0, fadeSpeed * Time.deltaTime);
 
             // Kontrollera om faderingen är klar
-            if (sprite.color.a <= 0)
+            if (sprite.color.a >= 1)
             {
-                sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0); // Sätt alpha till exakt 0
-                FadeOutComplete();
+                sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1); // Sätt alpha till exakt 1
+                fadeIn = false;
             }
         }
     }
 
-    public void StartFadeOut()
+    public void StartFadeIn()
     {
-        FadeOut = true;
-    }
-
-    private void FadeOutComplete()
-    {
-        FadeOut = false;
-        Debug.Log("Fade Out Complete");
-        if (canvas != null)
-        {
-            canvas.sortingOrder = 1; // Ändra canvas sorteringsordning när faderingen är klar
-        }
-
-        // Eventuella ytterligare åtgärder här
+        canvas.sortingOrder = 1;
+        fadeIn = true;
     }
 }

@@ -19,14 +19,16 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float autoSkipDelay = 2.0f; // Delay before auto-skipping single choice
     [SerializeField] private bool enableAutoSkip = true; // Toggle for auto-skip functionality
 
-    [SerializeField] private AudioClip typingSoundClip; // Audio clip for typing sound
-    private AudioSource audioSource; // Internal audio source for playing the clip
+    [SerializeField] private AudioSource audioSource; // Internal audio source for playing the clip
 
     private Coroutine typingCoroutine;
     private DialogueNode currentNode; // To keep track of the current dialogue node
     private string currentTitle; // To keep track of the current title
 
     private bool isTyping; // To check if the text is being typed
+
+    // Lägg till en referens till FadeInScreen
+    public FadeInScreen fadeInScreen;
 
     private void Awake()
     {
@@ -44,7 +46,7 @@ public class DialogueManager : MonoBehaviour
         HideDialogue();
 
         // Create an internal audio source for playing the typing sound
-        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.loop = true;
         audioSource.playOnAwake = false;
     }
@@ -110,9 +112,8 @@ public class DialogueManager : MonoBehaviour
         DialogBodyText.text = ""; // Clear the text before starting
 
         // Start typing sound
-        if (typingSoundClip != null)
+        if (audioSource != null)
         {
-            audioSource.clip = typingSoundClip;
             audioSource.Play();
         }
 
@@ -174,7 +175,8 @@ public class DialogueManager : MonoBehaviour
         // Check if there's a scene to load
         if (!string.IsNullOrEmpty(response.sceneToLoad))
         {
-            SceneManager.LoadScene(response.sceneToLoad);
+            // Start fade-out och byt scen när den är klar
+            StartCoroutine(FadeOutAndLoadScene(response.sceneToLoad));
             return;
         }
 
@@ -188,6 +190,21 @@ public class DialogueManager : MonoBehaviour
             // If no follow-up node, end the dialogue
             HideDialogue();
         }
+    }
+
+    private IEnumerator FadeOutAndLoadScene(string sceneName)
+    {
+        // Börja fade-out
+        fadeInScreen.StartFadeIn();
+
+        // Vänta tills fade-out är klar
+        while (fadeInScreen.GetComponent<Image>().color.a < 1)
+        {
+            yield return null;
+        }
+
+        // Byt scen
+        SceneManager.LoadScene(sceneName);
     }
 
     // Hide the dialogue UI
