@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class cameraScripty : MonoBehaviour
 {
@@ -22,7 +23,11 @@ public class cameraScripty : MonoBehaviour
         camTarget.y = truck.transform.position.y;
         transform.position = Vector3.Lerp(transform.position, camTarget, moveSpeed * Time.deltaTime);
 
-        if (truck.GetComponent<Rigidbody2D>().velocity.y > truck.GetComponent<Rigidbody2D>().velocity.x)
+        if (SceneManager.GetActiveScene().name == "RIKTIG - Drunk")
+        {
+            moveSpeed = 7;
+        }
+        else if (truck.GetComponent<Rigidbody2D>().velocity.y > truck.GetComponent<Rigidbody2D>().velocity.x)
         {
             moveSpeed = 5;
         }
