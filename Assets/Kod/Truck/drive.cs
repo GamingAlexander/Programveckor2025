@@ -18,6 +18,7 @@ public class drive : MonoBehaviour
 
     float drunkAccel;
     bool routineStart = false;
+
     IEnumerator drunkDeath()
     {
         for (int i = 0; i < 120; i++)
@@ -41,18 +42,19 @@ public class drive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SceneManager.GetActiveScene().name != "RIKTIG - Drunk")
-        {
-            if (offroad)
-            {
-                driveForce = 4600;
-            }
-            else
-                driveForce = 5400;
-        }
-      
 
-        if(!Input.GetKey(KeyCode.LeftControl) && SceneManager.GetActiveScene().name != "RIKTIG - Drunk") //ifall bromsen inte är tryckt och man inte är full
+        if (offroad && driveForce == 5400)
+        {
+            driveForce = 4600;
+        }
+        else if (driveForce < 0)
+            driveForce = 0;
+        else if (driveForce == 4600)
+            driveForce = 5400;
+        
+
+
+        if (!Input.GetKey(KeyCode.LeftControl) && SceneManager.GetActiveScene().name != "RIKTIG - Drunk") //ifall bromsen inte är tryckt och man inte är full
         {
             if (Input.GetKey(KeyCode.W))  
             {
@@ -138,8 +140,6 @@ public class drive : MonoBehaviour
                 }
             }
         }
-         
-       
     }
     private void SetAngle(float Z)
     {

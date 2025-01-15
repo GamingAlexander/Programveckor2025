@@ -165,11 +165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -104.33146
       objectReference: {fileID: 0}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -14.7
       objectReference: {fileID: 0}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -210,6 +210,14 @@ PrefabInstance:
     - target: {fileID: 7158239552581784906, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_Name
       value: Truck 2.0 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158239552581784906, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677690035828111211, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: autoTurn
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
