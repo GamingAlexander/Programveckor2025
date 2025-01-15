@@ -25,7 +25,7 @@ public class cameraScripty : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "RIKTIG - Drunk")
         {
-            moveSpeed = 7;
+            moveSpeed = 10;
         }
         else if (truck.GetComponent<Rigidbody2D>().velocity.y > truck.GetComponent<Rigidbody2D>().velocity.x)
         {

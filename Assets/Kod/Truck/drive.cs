@@ -33,6 +33,9 @@ public class drive : MonoBehaviour
     {
         rb2d = FindObjectOfType<Rigidbody2D>();
         spriteHandler = transform.GetChild(0).GetComponent<TruckSprite>();
+
+        if(SceneManager.GetActiveScene().name == "RIKTIG - Drunk")
+            transform.Rotate(0, 0, -90);
     }
 
     // Update is called once per frame
@@ -101,7 +104,7 @@ public class drive : MonoBehaviour
                 }
             }
         }
-        if(SceneManager.GetActiveScene().name == "RIKTIG - Drunk" && spriteHandler.currentDirectionIndex != 6 || SceneManager.GetActiveScene().name != "RIKTIG - Drunk")
+        if(SceneManager.GetActiveScene().name != "RIKTIG - Drunk")
         {
             if (Input.GetKey(KeyCode.A)) //svänga vänster och höger
             {
@@ -113,8 +116,9 @@ public class drive : MonoBehaviour
             }
         }
 
-        if (SceneManager.GetActiveScene().name == "RIKTIG - Drunk" && spriteHandler.currentDirectionIndex == 6)
-        {   
+        if (SceneManager.GetActiveScene().name == "RIKTIG - Drunk")
+        {
+            
             if (Input.GetKey(KeyCode.W) || rb2d.velocity.x > 6)
                 rb2d.AddForce(transform.up * driveForce * 2.2f * Time.deltaTime);
             if (routineStart == false)
