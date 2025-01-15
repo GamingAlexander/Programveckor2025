@@ -51861,6 +51861,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 449862852}
     - target: {fileID: 2360149035782300666, guid: 5575128291bba9746804db001a553025, type: 3}
+      propertyPath: typingSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3cdbedc5fd3c7294aaf1e1a95c8f180c, type: 3}
+    - target: {fileID: 2360149035782300666, guid: 5575128291bba9746804db001a553025, type: 3}
       propertyPath: responseButtonContainer
       value: 
       objectReference: {fileID: 1291334857}

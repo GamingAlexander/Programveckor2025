@@ -24,9 +24,9 @@ MonoBehaviour:
         responses:
         - responseText: Continue
           nextNode:
-            dialogueText: '"Here take this!"'
+            dialogueText: '"Drink that one right in front of ya!"'
             responses:
-            - responseText: Drink
+            - responseText: Continue
               nextNode:
                 dialogueText: Thanks mister.
                 responses:
@@ -34,22 +34,10 @@ MonoBehaviour:
                   nextNode:
                     dialogueText: 
                     responses: []
-                  sceneToLoad: menu_Casper
+                  sceneToLoad: 
                   animationTrigger: 
               sceneToLoad: 
               animationTrigger: Drink
-            - responseText: No
-              nextNode:
-                dialogueText: No, I changed my mind
-                responses:
-                - responseText: Continue
-                  nextNode:
-                    dialogueText: 
-                    responses: []
-                  sceneToLoad: 
-                  animationTrigger: 
-              sceneToLoad: menu_Casper
-              animationTrigger: 
           sceneToLoad: 
           animationTrigger: 
       sceneToLoad: 

@@ -541,6 +541,7 @@ MonoBehaviour:
   typingSpeed: 0.05
   autoSkipDelay: 2
   enableAutoSkip: 0
+  typingSoundClip: {fileID: 8300000, guid: 3cdbedc5fd3c7294aaf1e1a95c8f180c, type: 3}
 --- !u!4 &2009189985
 Transform:
   m_ObjectHideFlags: 0

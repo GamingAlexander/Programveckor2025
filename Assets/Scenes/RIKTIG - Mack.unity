@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0242885dca599bb42a994d9fd1e58ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: The Beginning
+  Name: Gas Station
   Dialogue: {fileID: 11400000, guid: 22764e98bbef2024a9706981e452ff01, type: 2}
 --- !u!4 &36886370
 Transform:
@@ -206,6 +206,7 @@ MonoBehaviour:
   typingSpeed: 0.05
   autoSkipDelay: 2
   enableAutoSkip: 0
+  typingSoundClip: {fileID: 8300000, guid: 3cdbedc5fd3c7294aaf1e1a95c8f180c, type: 3}
 --- !u!4 &59425460
 Transform:
   m_ObjectHideFlags: 0

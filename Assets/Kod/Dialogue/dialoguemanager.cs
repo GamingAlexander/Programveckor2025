@@ -19,6 +19,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float autoSkipDelay = 2.0f; // Delay before auto-skipping single choice
     [SerializeField] private bool enableAutoSkip = true; // Toggle for auto-skip functionality
 
+    [SerializeField] private AudioClip typingSoundClip; // Audio clip for typing sound
+    private AudioSource audioSource; // Internal audio source for playing the clip
+
     private Coroutine typingCoroutine;
     private DialogueNode currentNode; // To keep track of the current dialogue node
     private string currentTitle; // To keep track of the current title
@@ -39,6 +42,11 @@ public class DialogueManager : MonoBehaviour
 
         // Initially hide the dialogue UI
         HideDialogue();
+
+        // Create an internal audio source for playing the typing sound
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.loop = true;
+        audioSource.playOnAwake = false;
     }
 
     private void Update()
@@ -101,10 +109,23 @@ public class DialogueManager : MonoBehaviour
         isTyping = true;
         DialogBodyText.text = ""; // Clear the text before starting
 
+        // Start typing sound
+        if (typingSoundClip != null)
+        {
+            audioSource.clip = typingSoundClip;
+            audioSource.Play();
+        }
+
         foreach (char c in text)
         {
             DialogBodyText.text += c;
             yield return new WaitForSeconds(typingSpeed); // Wait before adding next character
+        }
+
+        // Stop typing sound
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
         }
 
         isTyping = false;
@@ -127,6 +148,13 @@ public class DialogueManager : MonoBehaviour
 
         // Display the full text immediately
         DialogBodyText.text = currentNode.dialogueText;
+
+        // Stop typing sound
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+
         isTyping = false;
     }
 

@@ -8,12 +8,15 @@ public class DarkScreen : MonoBehaviour
     bool FadeIn = false;
     bool FadeOut = false;
     Image sprite;
+    Canvas canvas;
     float waitLoadTimer = 1.5f;
 
     private void Start()
     {
         sprite = GetComponent<Image>();
+        canvas = GetComponentInParent<Canvas>(); // Hämta canvas-komponenten från föräldern
     }
+
     private void Update()
     {
         if (waitLoadTimer > 0)
@@ -29,29 +32,26 @@ public class DarkScreen : MonoBehaviour
             waitLoadTimer = -1;
         }
 
-        if (FadeOut == true && sprite.color.a <= 1)
+        if (FadeOut && sprite.color.a < 1)
         {
-            print("blacking");
             sprite.color += new Color(0, 0, 0, 1) * Time.deltaTime;
+            if (sprite.color.a >= 1)
+            {
+                sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1); // Säkerställ att alpha är exakt 1
+                FadeOutComplete();
+            }
         }
-        
-
 
         if (FadeIn && sprite.color.a > 0)
         {
             sprite.color -= new Color(0, 0, 0, 1) * Time.deltaTime;
-        }
-        else
-        {
-            FadeIn = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            ScreenFadeOut();
+            if (sprite.color.a <= 0)
+            {
+                sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0); // Säkerställ att alpha är exakt 0
+                FadeInComplete();
+            }
         }
     }
-    
 
     public void ScreenFadeIn()
     {
@@ -61,9 +61,27 @@ public class DarkScreen : MonoBehaviour
 
     public void ScreenFadeOut()
     {
-        print("black");
         FadeOut = true;
         FadeIn = false;
+    }
 
+    private void FadeInComplete()
+    {
+        FadeIn = false;
+        Debug.Log("Fade In Complete");
+        if (canvas != null)
+        {
+            canvas.sortingOrder = 0; // Ändra canvas sorteringsordning när faderingen är klar
+        }
+    }
+
+    private void FadeOutComplete()
+    {
+        FadeOut = false;
+        Debug.Log("Fade Out Complete");
+        if (canvas != null)
+        {
+            canvas.sortingOrder = 1; // Ändra canvas sorteringsordning när faderingen är klar
+        }
     }
 }
