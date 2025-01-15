@@ -15,6 +15,19 @@ public class drive : MonoBehaviour
     [SerializeField] int forceDoubler;
     [SerializeField] float autoTurn;
     public bool offroad;
+
+    float drunkAccel;
+    bool routineStart = false;
+    IEnumerator drunkDeath()
+    {
+        for (int i = 0; i < 120; i++)
+        {
+            print("more force");
+            yield return new WaitForSeconds(0.25f);
+            driveForce += 550;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,12 +38,16 @@ public class drive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (offroad)
+        if(SceneManager.GetActiveScene().name != "RIKTIG - Drunk")
         {
-            driveForce = 4600;
+            if (offroad)
+            {
+                driveForce = 4600;
+            }
+            else
+                driveForce = 5400;
         }
-        else
-            driveForce = 5400;
+      
 
         if(!Input.GetKey(KeyCode.LeftControl) && SceneManager.GetActiveScene().name != "RIKTIG - Drunk") //ifall bromsen inte är tryckt och man inte är full
         {
@@ -65,8 +82,26 @@ public class drive : MonoBehaviour
                 driving = false;
             }
             bracking = false;
+
+            if (Input.GetKey(KeyCode.LeftControl)) //bromsen
+            {
+                rb2d.AddForce(-rb2d.velocity / 1.5f * Time.deltaTime);
+                if (rb2d.velocity.x < 0.8 && rb2d.velocity.x > -0.8 && rb2d.velocity.y < 0.8 && rb2d.velocity.y > -0.8) //lastbilen stannar ifall den hamnar under denna hastighet
+                {
+                    rb2d.Sleep();
+                }
+                bracking = true;
+            }
+            else if (driving == false) //automatisk broms
+            {
+                rb2d.AddForce(-rb2d.velocity / 2 * Time.deltaTime);
+                if (rb2d.velocity.x < 0.7 && rb2d.velocity.x > -0.7 && rb2d.velocity.y < 0.7 && rb2d.velocity.y > -0.7) //lastbilen stannar ifall den hamnar under denna hastighet
+                {
+                    rb2d.Sleep();
+                }
+            }
         }
-        if(SceneManager.GetActiveScene().name == "RIKTIG - Drunk" && spriteHandler.currentDirectionIndex == 6 || SceneManager.GetActiveScene().name != "RIKTIG - Drunk")
+        if(SceneManager.GetActiveScene().name == "RIKTIG - Drunk" && spriteHandler.currentDirectionIndex != 6 || SceneManager.GetActiveScene().name != "RIKTIG - Drunk")
         {
             if (Input.GetKey(KeyCode.A)) //svänga vänster och höger
             {
@@ -77,23 +112,15 @@ public class drive : MonoBehaviour
                 transform.Rotate(0, 0, -turnAngle * Time.deltaTime);
             }
         }
-        
 
-        if (Input.GetKey(KeyCode.LeftControl)) //bromsen
-        {
-            rb2d.AddForce(-rb2d.velocity / 1.5f * Time.deltaTime);
-            if(rb2d.velocity.x < 0.8 && rb2d.velocity.x > -0.8 && rb2d.velocity.y < 0.8 && rb2d.velocity.y > -0.8) //lastbilen stannar ifall den hamnar under denna hastighet
+        if (SceneManager.GetActiveScene().name == "RIKTIG - Drunk" && spriteHandler.currentDirectionIndex == 6)
+        {   
+            if (Input.GetKey(KeyCode.W) || rb2d.velocity.x > 6)
+                rb2d.AddForce(transform.up * driveForce * 2.2f * Time.deltaTime);
+            if (routineStart == false)
             {
-                rb2d.Sleep();
-            }
-            bracking = true;
-        }
-        else if (driving == false) //automatisk broms
-        {
-            rb2d.AddForce(-rb2d.velocity / 2 * Time.deltaTime);
-            if (rb2d.velocity.x < 0.7 && rb2d.velocity.x > -0.7 && rb2d.velocity.y < 0.7 && rb2d.velocity.y > -0.7) //lastbilen stannar ifall den hamnar under denna hastighet
-            {
-                rb2d.Sleep();
+                StartCoroutine(drunkDeath());
+                routineStart = true;
             }
         }
 
