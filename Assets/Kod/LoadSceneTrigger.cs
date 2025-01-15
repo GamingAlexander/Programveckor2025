@@ -30,11 +30,10 @@ public class LoadSceneTrigger : MonoBehaviour
     {
         if (active)
         {
-            if(SceneManager.GetActiveScene().name != "RIKTIG - Drunk")
-            {
-                truck.driveForce = 0;
-                truck.rb2d.velocity *= 0.95f;
-            }
+           
+                //truck.driveForce = 0;
+                //truck.rb2d.velocity *= 0.95f;
+            
 
             if (timer > 0)
             {
