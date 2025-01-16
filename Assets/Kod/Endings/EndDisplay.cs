@@ -13,7 +13,7 @@ public class EndDisplay : MonoBehaviour
     private void Awake()
     {
         imgSprite = GetComponent<Image>();
-        txt = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        txt = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
     }
 
     private void Start()
@@ -27,22 +27,17 @@ public class EndDisplay : MonoBehaviour
     }
     private void UpdateDisplay()
     {
+        transform.GetChild(1).GetComponent<RectTransform>().sizeDelta = new Vector3(400, 50, 0);
         if (unlock)
         {
-            if (imgSprite==null)
-            {
-                
-                print("no sprite");
-            }
             txt.text = "" + title;
-            txt.color = Color.black;
-            imgSprite.color = Color.white;
-            txt.transform.position = new Vector3(0, -80);
+            txt.transform.position = new Vector3(0, -140);
             
         }
         else
         {
-            imgSprite.color = new Color(0.2f, 0.2f, 0.2f);
+            imgSprite.color = new Color(0.1f, 0.1f, 0.1f);
+            transform.GetChild(0).GetComponent<Image>().color = Color.black;
         }
     }
 
