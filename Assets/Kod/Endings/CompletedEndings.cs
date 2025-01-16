@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CompletedEndings : MonoBehaviour
 {
-    public bool[] endings = new bool[3];
+    public bool[] endings = new bool[6];
     public bool displaying;
 
     public void Start() //Checks which endings has been saved as completed 
@@ -23,7 +23,7 @@ public class CompletedEndings : MonoBehaviour
         }
     }
 
-    public void CompleteEndning(int number) //saves ending x as complete 
+    public void CompleteEndning(int number) //saves ending x as complete (starts at 1)
     {
         endings[number - 1] = true;
         PlayerPrefs.SetInt("Ending" + number, number);
