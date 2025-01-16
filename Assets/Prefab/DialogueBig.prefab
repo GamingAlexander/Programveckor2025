@@ -236,6 +236,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5246150716128120337}
     - target: {fileID: 6706228393338846105, guid: 5575128291bba9746804db001a553025, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706228393338846105, guid: 5575128291bba9746804db001a553025, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: e073899504f7e0b44bdbd685ab98022e, type: 3}
@@ -395,6 +399,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8359426089784183541}
     m_Modifications:
+    - target: {fileID: 2234222777259302323, guid: e26894b224392fa4d9275ebc9bc50595, type: 3}
+      propertyPath: audioSound
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2234222777259302323, guid: e26894b224392fa4d9275ebc9bc50595, type: 3}
       propertyPath: sources.Array.size
       value: 1

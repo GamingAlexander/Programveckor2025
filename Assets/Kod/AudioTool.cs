@@ -6,6 +6,7 @@ public class AudioTool : MonoBehaviour
 {
     [SerializeField] AudioSource[] sources;
     public float audioSpeed;
+    [SerializeField] float audioSound = 0.5f;
     bool[] fadeIn;
     bool[] fadeOut;
    
@@ -41,7 +42,7 @@ public class AudioTool : MonoBehaviour
     private void FadingIn(int index)
     {
         
-        if (sources[index].volume <= 0.5 && fadeIn[index])
+        if (sources[index].volume <= audioSound && fadeIn[index])
         {
             sources[index].volume += Time.deltaTime;
         }

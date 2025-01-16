@@ -240,6 +240,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBig
       objectReference: {fileID: 0}
+    - target: {fileID: 4682817867397064154, guid: ab2f021cd2c14db4c872744600c167cf, type: 3}
+      propertyPath: audioSound
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435137160319934208, guid: ab2f021cd2c14db4c872744600c167cf, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7575542246785065250, guid: ab2f021cd2c14db4c872744600c167cf, type: 3}
       propertyPath: Name
       value: Gas Station
@@ -291,7 +299,7 @@ PrefabInstance:
     - target: {fileID: 8802283650437596698, guid: ab2f021cd2c14db4c872744600c167cf, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: e2345ae013713794a9fb8b9efb6ced17, type: 3}
+      objectReference: {fileID: 8300000, guid: 36f55b13377bb464a9ab03f573170ec5, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
