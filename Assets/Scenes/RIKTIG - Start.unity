@@ -105308,7 +105308,7 @@ MonoBehaviour:
   sceneName: RIKTIG - Mack
   audioManager: {fileID: 2006689639}
   screen: {fileID: 893519092}
-  wait: 1
+  wait: 0
   timer: 0
   active: 0
 --- !u!114 &893519092 stripped
@@ -105649,7 +105649,7 @@ MonoBehaviour:
   sceneName: RIKTIG - Bar
   audioManager: {fileID: 2006689639}
   screen: {fileID: 893519092}
-  wait: 20
+  wait: 14
   timer: 0
   active: 0
 --- !u!114 &1210551640
