@@ -26,6 +26,12 @@ public class LoadSceneTrigger : MonoBehaviour
         active = true;
     }
 
+    void faded()
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+        
     private void Update()
     {
         if (active)
@@ -41,7 +47,8 @@ public class LoadSceneTrigger : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(sceneName);
+                screen.ScreenFadeOut();
+                Invoke("faded",1f);
             }
         }
     }
