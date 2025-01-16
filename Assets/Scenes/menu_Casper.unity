@@ -2648,12 +2648,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endingIconPrefab: {fileID: 2286523032290198558, guid: 35828bef0f491624c864c62dc2160f86, type: 3}
   endingTitles:
-  - Krasch
-  - Alcholic
-  - Mexsico
-  - Trafiker
-  - Stolen
-  - Good Job
+  - Delivery
+  - Crash
+  - Mexico
+  - Trafficker
+  - Death
 --- !u!114 &2070246476
 MonoBehaviour:
   m_ObjectHideFlags: 0
