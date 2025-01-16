@@ -27,7 +27,7 @@ public class cameraScripty : MonoBehaviour
         {
             moveSpeed = 10;
         }
-        else if (truck.GetComponent<Rigidbody2D>().velocity.y > truck.GetComponent<Rigidbody2D>().velocity.x)
+        else if (truck.GetComponent<Rigidbody2D>().velocity.y > truck.GetComponent<Rigidbody2D>().velocity.x || truck.GetComponent<Rigidbody2D>().velocity.y < -1)
         {
             moveSpeed = 5;
         }
