@@ -13,25 +13,54 @@ MonoBehaviour:
   m_Name: GasStation
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: Damn... this ain't it chief...
+    dialogueText: "C\u2019mon, Cliff. Ain\u2019t like you didn\u2019t see this comin\u2019.
+      Long hauls cost long dollars. Still, reckon I could\u2019ve fueled up cheaper
+      a couple towns back, oh well."
     responses:
-    - responseText: Continue
+    - responseText: Space
       nextNode:
-        dialogueText: "C\u2019mon, Cliff. Ain\u2019t like you didn\u2019t see this
-          comin\u2019. Long hauls cost long dollars. Still, reckon I could\u2019ve
-          fueled up cheaper a couple towns back, oh well."
+        dialogueText: "Alright, Bessie, you\u2019re topped off and ready to roll.
+          Hope this tank gets us all the way south. Last thing I need\u2019s another
+          pit stop in the middle o\u2019 nowhere."
         responses:
-        - responseText: Continue
+        - responseText: Space
           nextNode:
-            dialogueText: "Alright, Bessie, you\u2019re topped off and ready to roll.
-              Hope this tank gets us all the way south. Last thing I need\u2019s
-              another pit stop in the middle o\u2019 nowhere."
+            dialogueText: "Well, would you look a\u2019 that\u2026 \u2018The Rusty
+              Nail Cold Beer and Good Times.\u2019 Sounds like my kinda joint. Could
+              use a break anyway. Ain\u2019t no harm in wetting the whistle after
+              a long haul."
             responses:
-            - responseText: Continue
+            - responseText: Space
               nextNode:
-                dialogueText: 
-                responses: []
-              sceneToLoad: RIKTIG - Start
+                dialogueText: "Still got time to make good on this run. Reckon one
+                  drink won\u2019t hurt none."
+                responses:
+                - responseText: Bar
+                  nextNode:
+                    dialogueText: "Alright, Bessie, you take a breather here. I\u2019ll
+                      be back \u2018fore ya know it. Maybe I\u2019ll even bring ya
+                      some good luck from the jukebox."
+                    responses:
+                    - responseText: Space
+                      nextNode:
+                        dialogueText: 
+                      sceneToLoad: RIKTIG - Bar
+                      animationTrigger: 
+                  sceneToLoad: 
+                  animationTrigger: 
+                - responseText: Drive
+                  nextNode:
+                    dialogueText: "Nah, c\u2019mon Cliff you're a tough guy you can
+                      drive all the way! "
+                    responses:
+                    - responseText: Space
+                      nextNode:
+                        dialogueText: 
+                      sceneToLoad: 
+                      animationTrigger: 
+                  sceneToLoad: 
+                  animationTrigger: 
+              sceneToLoad: 
               animationTrigger: 
           sceneToLoad: 
           animationTrigger: 

@@ -42,9 +42,9 @@ EditorBuildSettings:
     path: Assets/Scenes/RIKTIG - Start.unity
     guid: 4a093455bc28e704a927c155db119328
   - enabled: 1
-    path: "Assets/Scenes/Endings/RIKTIG - D\xF6d.unity"
+    path: "Assets/Scenes/RIKTIG - D\xF6d.unity"
     guid: 5af952b0b236eb64188f20557388e055
   - enabled: 1
-    path: Assets/Scenes/Endings/RIKTIG - Crash.unity
-    guid: 99c83ecd1515dcf4bbcc8c48bf0325ac
+    path: Assets/Scenes/Bar/RIKTIG - Bar2.unity
+    guid: 6979df5759de2014d92a30400fb2b558
   m_configObjects: {}

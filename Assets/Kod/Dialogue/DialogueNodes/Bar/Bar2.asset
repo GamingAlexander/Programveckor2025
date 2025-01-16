@@ -40,7 +40,7 @@ MonoBehaviour:
                     - responseText: Space
                       nextNode:
                         dialogueText: 
-                      sceneToLoad: RIKTIG - ILASTBIL
+                      sceneToLoad: RIKTIG - Bar2
                       animationTrigger: 
                   sceneToLoad: 
                   animationTrigger: Drink
