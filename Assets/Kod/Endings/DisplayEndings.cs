@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DisplayEndings : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class DisplayEndings : MonoBehaviour
     float length;
     [SerializeField] GameObject endingIconPrefab;
     [SerializeField] string[] endingTitles;
-    
+    [SerializeField] Sprite[] endingSprites;
+
     public void UpdateEndingsDisplay()
     {
         saved = GetComponent<CompletedEndings>();
@@ -19,6 +21,7 @@ public class DisplayEndings : MonoBehaviour
             if (saved.endings[i] == true)
             {
                 newDisplay.GetComponent<EndDisplay>().title = endingTitles[i];
+                newDisplay.GetComponent<Image>().sprite = endingSprites[i];
                 newDisplay.GetComponent<EndDisplay>().Unlocked();
             }
         }

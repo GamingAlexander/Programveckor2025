@@ -2652,7 +2652,13 @@ MonoBehaviour:
   - Crash
   - Mexico
   - Trafficker
-  - Death
+  - Alcholism
+  endingSprites:
+  - {fileID: 21300000, guid: 328b663c930f6464bb3da05a7d20a162, type: 3}
+  - {fileID: 21300000, guid: 03ea19ac288ed3848a7cd8425b161803, type: 3}
+  - {fileID: 21300000, guid: d84d2cddc18b269428c3b1a25da60231, type: 3}
+  - {fileID: 21300000, guid: 13ba6f302bf7b6144bdea21c5848072a, type: 3}
+  - {fileID: 21300000, guid: f19f3c5671c4997479f0fc88656168b1, type: 3}
 --- !u!114 &2070246476
 MonoBehaviour:
   m_ObjectHideFlags: 0
