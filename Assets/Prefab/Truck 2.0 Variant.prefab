@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4524410569717318947}
   - component: {fileID: 7190307268049648238}
   m_Layer: 0
-  m_Name: Drift Audio
+  m_Name: 'Truck SFX '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 0.53
   Loop: 0
   Mute: 0
@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clips:
   - {fileID: 8300000, guid: 6ce1f4a7acc6ef541b9ffbd8f43416a0, type: 3}
+  - {fileID: 8300000, guid: 41f0320842bc6ad49bf14ccff03556e7, type: 3}
 --- !u!1 &1186142353800447678
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,31 +334,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -124.26
+      value: -104.73
       objectReference: {fileID: 0}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.96
+      value: -24.599998
       objectReference: {fileID: 0}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8134566
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5816257
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -369,11 +370,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -71.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5384036399885197069, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867582497223175730, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_Name
+      value: Truck Sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042639216269822019, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: wait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042639216269822019, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: sceneName
+      value: RIKTIG - Crash
       objectReference: {fileID: 0}
     - target: {fileID: 7158239552581784906, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_Name
@@ -382,6 +395,10 @@ PrefabInstance:
     - target: {fileID: 7158239552581784906, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573719568121015149, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: m_Mass
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8677690035828111211, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: autoTurn
@@ -406,6 +423,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7158239552581784906, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5209046943669994257}
+    - targetCorrespondingSourceObject: {fileID: 7158239552581784906, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7820708249325725946}
   m_SourcePrefab: {fileID: 100100000, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
 --- !u!4 &2145372409599471039 stripped
 Transform:
@@ -528,3 +548,48 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: a4d6c9c61ba97e04aa392acee63b1d69, type: 3}
   - {fileID: 8300000, guid: a61c2339bcddfd94ba799dec8b6b382f, type: 3}
+--- !u!61 &7820708249325725946
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6347483697608726052}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

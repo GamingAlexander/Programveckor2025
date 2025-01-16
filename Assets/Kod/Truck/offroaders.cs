@@ -77,7 +77,9 @@ public class offroaders : LoadSceneTrigger
 
     void die()
     {
+        dr.driveForce *= 0.1f;
         audio.playAudio(1);
+        audio.prioriticeAudio = true;
         audioManager.FadeOutAllAudio();
         screen.ScreenFadeOut();
         timer = wait;

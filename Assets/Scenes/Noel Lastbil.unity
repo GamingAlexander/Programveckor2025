@@ -565,7 +565,7 @@ PrefabInstance:
     - target: {fileID: 7190307268049648238, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: clips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 1a606ab7d1155874e908d6c3abaf18e2, type: 3}
+      objectReference: {fileID: 8300000, guid: 41f0320842bc6ad49bf14ccff03556e7, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
