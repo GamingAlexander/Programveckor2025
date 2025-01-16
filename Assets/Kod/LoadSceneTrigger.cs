@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneTrigger : MonoBehaviour
 {
-    [SerializeField] string sceneName;
-    [SerializeField] AudioTool audioManager;
-    [SerializeField] DarkScreen screen;
+    public string sceneName;
+    public AudioTool audioManager;
+    public   DarkScreen screen;
     drive truck;
     public float wait;
-    float timer;
-    bool active = false;
+    public float timer;
+    public bool active = false;
 
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,11 +21,16 @@ public class LoadSceneTrigger : MonoBehaviour
 
 
         audioManager.FadeOutAllAudio();
-        screen.ScreenFadeOut();
         timer = wait;
         active = true;
     }
 
+    void faded()
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+        
     private void Update()
     {
         if (active)
@@ -41,7 +46,8 @@ public class LoadSceneTrigger : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(sceneName);
+                screen.ScreenFadeOut();
+                Invoke("faded",1f);
             }
         }
     }
