@@ -7,10 +7,33 @@ public class offroaders : LoadSceneTrigger
 {
 
     drive dr;
+    PlayAudio audio;
 
     [SerializeField] int stones = 0;
     float timer2;
 
+    void Start()
+    {
+        dr = FindObjectOfType<drive>();
+        audio = transform.GetChild(1).GetComponent<PlayAudio>();
+    }
+
+    void Update()
+    {
+        if (active)
+        {
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+            }
+            else
+            {
+                SceneManager.LoadScene(sceneName);
+            }
+        }
+
+        timer2 -= Time.deltaTime;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {   
         if (collision.gameObject.layer == LayerMask.NameToLayer("offroad"))
@@ -54,33 +77,12 @@ public class offroaders : LoadSceneTrigger
 
     void die()
     {
+        audio.playAudio(1);
         audioManager.FadeOutAllAudio();
         screen.ScreenFadeOut();
         timer = wait;
         active = true;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        dr = FindObjectOfType<drive>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(active)
-        {
-             if (timer > 0)
-            {
-                timer -= Time.deltaTime;
-            }
-            else
-            {
-                SceneManager.LoadScene(sceneName);
-            }
-        }
-
-        timer2 -= Time.deltaTime;
-    }
+    
 }
