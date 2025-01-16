@@ -21,7 +21,6 @@ public class LoadSceneTrigger : MonoBehaviour
 
 
         audioManager.FadeOutAllAudio();
-        screen.ScreenFadeOut();
         timer = wait;
         active = true;
     }
