@@ -490,7 +490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2727709791976865395, guid: e26894b224392fa4d9275ebc9bc50595, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2727709791976865395, guid: e26894b224392fa4d9275ebc9bc50595, type: 3}
       propertyPath: m_audioClip
@@ -550,6 +550,17 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 2727709791976865395, guid: e26894b224392fa4d9275ebc9bc50595, type: 3}
   m_PrefabInstance: {fileID: 1960226371}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1960226375 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2234222777259302323, guid: e26894b224392fa4d9275ebc9bc50595, type: 3}
+  m_PrefabInstance: {fileID: 1960226371}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ff22a2159763b478a5a05000b73c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2074123267
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +659,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2360149035782300666, guid: 5575128291bba9746804db001a553025, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1960226375}
     - target: {fileID: 2360149035782300666, guid: 5575128291bba9746804db001a553025, type: 3}
       propertyPath: fadeInScreen
       value: 

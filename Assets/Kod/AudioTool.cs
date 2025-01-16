@@ -41,7 +41,7 @@ public class AudioTool : MonoBehaviour
     private void FadingIn(int index)
     {
         
-        if (sources[index].volume <= 1 && fadeIn[index])
+        if (sources[index].volume <= 0.5 && fadeIn[index])
         {
             sources[index].volume += Time.deltaTime;
         }

@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance { get; private set; }
 
     // UI references
+    public AudioTool audioManager;
     public GameObject sceneAnimation;
     public GameObject DialogueParent; // Main container for dialogue UI
     public TextMeshProUGUI DialogTitleText, DialogBodyText; // Text components for title and body
@@ -196,7 +197,7 @@ public class DialogueManager : MonoBehaviour
     {
         // Börja fade-out
         fadeInScreen.StartFadeIn();
-
+        audioManager.FadeOutAllAudio();
         // Vänta tills fade-out är klar
         while (fadeInScreen.GetComponent<Image>().color.a < 1)
         {
