@@ -71,7 +71,7 @@ public class DarkScreen : MonoBehaviour
         Debug.Log("Fade In Complete");
         if (canvas != null)
         {
-            canvas.sortingOrder = 0; // Ändra canvas sorteringsordning när faderingen är klar
+            canvas.sortingOrder = -1; // Ändra canvas sorteringsordning när faderingen är klar
         }
     }
 

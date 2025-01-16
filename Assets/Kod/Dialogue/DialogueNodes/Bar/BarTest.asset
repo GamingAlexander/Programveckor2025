@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BarTest
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: "\"Well, howdy there, stranger. Ain\u2019t seen your face \u2018round
-      these parts before. What brings ya to Rusty Nail Saloon? Business, pleasure,
-      or just lookin\u2019 to wet yer whistle?\""
+    dialogueText: "Bartender: \"Well, howdy there, stranger. Ain\u2019t seen your
+      face \u2018round these parts before. What brings ya to Rusty Nail Saloon? Business,
+      pleasure, or just lookin\u2019 to wet yer whistle?\""
     responses:
     - responseText: Continue
       nextNode:

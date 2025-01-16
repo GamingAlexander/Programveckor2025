@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff038411e4daab4ebd5c814a131b0fd, type: 3}
+  m_Name: Bar2
+  m_EditorClassIdentifier: 
+  RootNode:
+    dialogueText: "Well now, Cliff ol\u2019 buddy... you done put away a good few,
+      haven\u2019t ya? Mmm, yeah. But they were cold, an\u2019 I reckon I earned
+      \u2018em. Ain\u2019t no crime in that\u2026"
+    responses:
+    - responseText: Space
+      nextNode:
+        dialogueText: "Maybe just one more for the road, huh? Wait. Road\u2026 shoot,
+          the road! I gotta drive!"
+        responses:
+        - responseText: One more
+          nextNode:
+            dialogueText: "Yeah, you\u2019re good at handlin\u2019 things, Cliff.
+              You\u2019ve hauled heavier loads than this! And you ain\u2019t even
+              that drunk... just a lil\u2019 buzzed. To bad decisions! May they always
+              make for good stories later. "
+            responses:
+            - responseText: Space
+              nextNode:
+                dialogueText: Maybe one more Cliff?
+                responses:
+                - responseText: One more
+                  nextNode:
+                    dialogueText: Yes! I love life! Wahoo!
+                    responses:
+                    - responseText: Space
+                      nextNode:
+                        dialogueText: 
+                      sceneToLoad: RIKTIG - ILASTBIL
+                      animationTrigger: 
+                  sceneToLoad: 
+                  animationTrigger: Drink
+                - responseText: Skip
+                  nextNode:
+                    dialogueText: 'You know, you are a smart man Cliff. '
+                    responses:
+                    - responseText: Space
+                      nextNode:
+                        dialogueText: 
+                      sceneToLoad: 
+                      animationTrigger: RIKTIG - ILASTBIL
+                  sceneToLoad: 
+                  animationTrigger: 
+              sceneToLoad: 
+              animationTrigger: 
+          sceneToLoad: 
+          animationTrigger: Drink
+        - responseText: Skip
+          nextNode:
+            dialogueText: "See? You\u2019re a smart man, Cliff. A smart man who knows
+              when to quit. Now go on, get back to the truck \u2018fore ya start
+              arguin\u2019 with yourself again!"
+            responses:
+            - responseText: Space
+              nextNode:
+                dialogueText: 
+                responses: []
+              sceneToLoad: RIKTIG - ILASTBIL
+              animationTrigger: 
+          sceneToLoad: 
+          animationTrigger: 
+      sceneToLoad: 
+      animationTrigger: 
