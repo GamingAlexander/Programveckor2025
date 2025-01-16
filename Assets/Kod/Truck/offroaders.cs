@@ -8,7 +8,7 @@ public class offroaders : LoadSceneTrigger
 
     drive dr;
 
-    int stones = 0;
+    [SerializeField] int stones = 0;
     float timer2;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,7 +28,7 @@ public class offroaders : LoadSceneTrigger
                 die();
 
             timer2 = 1;
-            timer2 -= Time.deltaTime;
+
         }
     }
 
@@ -80,5 +80,7 @@ public class offroaders : LoadSceneTrigger
                 SceneManager.LoadScene(sceneName);
             }
         }
+
+        timer2 -= Time.deltaTime;
     }
 }

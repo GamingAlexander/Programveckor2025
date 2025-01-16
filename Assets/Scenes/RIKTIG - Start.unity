@@ -106205,6 +106205,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1792029421}
     - target: {fileID: 2360149035782300666, guid: 5575128291bba9746804db001a553025, type: 3}
+      propertyPath: enableAutoSkip
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360149035782300666, guid: 5575128291bba9746804db001a553025, type: 3}
       propertyPath: sceneAnimation
       value: 
       objectReference: {fileID: 714825064}
@@ -106216,6 +106220,10 @@ PrefabInstance:
       propertyPath: typingSoundClip
       value: 
       objectReference: {fileID: 8300000, guid: 3cdbedc5fd3c7294aaf1e1a95c8f180c, type: 3}
+    - target: {fileID: 2360149035782300666, guid: 5575128291bba9746804db001a553025, type: 3}
+      propertyPath: responseButtonPrefab
+      value: 
+      objectReference: {fileID: 2928751703015123877, guid: c1be430f0a533d845b9195e727b9cd49, type: 3}
     - target: {fileID: 2360149035782300666, guid: 5575128291bba9746804db001a553025, type: 3}
       propertyPath: responseButtonContainer
       value: 
@@ -106682,6 +106690,30 @@ PrefabInstance:
     - target: {fileID: 5641387539948863272, guid: c22f9329eb0ad544db6f9366e2094a8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6983906926357845037, guid: c22f9329eb0ad544db6f9366e2094a8b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6983906926357845037, guid: c22f9329eb0ad544db6f9366e2094a8b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6983906926357845037, guid: c22f9329eb0ad544db6f9366e2094a8b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6983906926357845037, guid: c22f9329eb0ad544db6f9366e2094a8b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 418
+      objectReference: {fileID: 0}
+    - target: {fileID: 6983906926357845037, guid: c22f9329eb0ad544db6f9366e2094a8b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 974
+      objectReference: {fileID: 0}
+    - target: {fileID: 6983906926357845037, guid: c22f9329eb0ad544db6f9366e2094a8b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
