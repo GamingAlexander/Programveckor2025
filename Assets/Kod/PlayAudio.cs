@@ -20,11 +20,6 @@ public class PlayAudio : MonoBehaviour
         {
             return;
         }
-       
-        if (TempVolume != 0)
-        {
-            source.volume += TempVolume;
-        }
         source.Play();
         if (prioriticeAudio)
         {

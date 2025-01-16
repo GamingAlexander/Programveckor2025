@@ -5,7 +5,8 @@ using UnityEngine;
 public class TruckSprite : MonoBehaviour
 {
     [SerializeField] Sprite[] sprites; // Array of 8 directional sprites
-    [SerializeField] GameObject dragParticleEffectPrefab; // Prefab for drag particle effect
+    [SerializeField] GameObject dragParticleEffect; // Prefab 
+    [SerializeField] GameObject sandParticleEffect; // Prefab 
     [SerializeField] int particleWait;
    
     int particleCounter = 0;
@@ -60,6 +61,7 @@ public class TruckSprite : MonoBehaviour
             if (sprites.Length == 8)
             {
                 playerSprite.sprite = sprites[directionIndex];
+                //UpdateLights(directionIndex);
             }
 
             // Update the current direction index
@@ -147,18 +149,18 @@ public class TruckSprite : MonoBehaviour
             offset = 0.25f;
         }
         
-        CreateParticles(spred + offset, chance);
-        CreateParticles(-spred + offset, chance);
+        GenerateParticles(spred + offset, chance);
+        GenerateParticles(-spred + offset, chance);
         drag = true;
     }
 
-    private void CreateParticles(float pos, float chance)
+    private void GenerateParticles(float pos, float chance)
     {
         if (particleCounter == particleWait)
         {
             if (Random.Range(0, 1) <= chance)
             {
-                Instantiate(dragParticleEffectPrefab, transform.position + rotObj.up * -0.6f + rotObj.right * pos, rotObj.transform.rotation);
+                CreateParticle(pos);
                 if (left)
                 {
                     left = false;
@@ -175,6 +177,24 @@ public class TruckSprite : MonoBehaviour
             particleCounter++;
         }
         
+    }
+
+    private void CreateParticle(float pos)
+    {
+        if (rotObj.transform.GetComponent<drive>().offroad)
+        {
+            Instantiate(sandParticleEffect, transform.position + rotObj.up * -0.6f + rotObj.right * pos, rotObj.transform.rotation);
+        }
+        else
+        {
+            Instantiate(dragParticleEffect, transform.position + rotObj.up * -0.6f + rotObj.right * pos, rotObj.transform.rotation);
+        }
+    }
+
+    private void UpdateLights(int z)
+    {
+        transform.GetChild(0).eulerAngles = new Vector3(0, 0, z * 45);
+        transform.GetChild(1).eulerAngles = new Vector3(0, 0, 180 + z * 45);
     }
 }
 

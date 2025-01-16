@@ -108,6 +108,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7dcac4fb183f2c44eb411a1556f10963, type: 3}
   dragParticleEffectPrefab: {fileID: 9183460510332273932, guid: 7ca5f66b4608af7458eded20e15de153, type: 3}
   particleWait: 0
+  drag: 0
+  timerAudio: 0
   currentDirectionIndex: -1
 --- !u!1 &7158239552581784906
 GameObject:
@@ -121,8 +123,8 @@ GameObject:
   - component: {fileID: 5384036399885197069}
   - component: {fileID: 8573719568121015149}
   - component: {fileID: 8677690035828111211}
-  - component: {fileID: 5097075695343011719}
   - component: {fileID: 7042639216269822019}
+  - component: {fileID: 5097075695343011719}
   m_Layer: 0
   m_Name: Truck 1.0
   m_TagString: Untagged
@@ -245,6 +247,25 @@ MonoBehaviour:
   forceDoubler: 2
   autoTurn: 4
   offroad: 0
+--- !u!114 &7042639216269822019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158239552581784906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564d633e63287d542ac3e12e13c63a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
+  audioManager: {fileID: 0}
+  screen: {fileID: 0}
+  wait: 0
+  timer: 0
+  active: 0
+  stones: 0
 --- !u!61 &5097075695343011719
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -290,15 +311,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.8}
   m_EdgeRadius: 0
---- !u!114 &7042639216269822019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7158239552581784906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 564d633e63287d542ac3e12e13c63a66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
