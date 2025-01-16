@@ -13,5 +13,27 @@ MonoBehaviour:
   m_Name: StulenTruck
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: 
-    responses: []
+    dialogueText: "Now, wait just a dang minute... Where\u2019s my truck? I know
+      I parked her right there. Big an red, ol\u2019 beauty, can\u2019t exactly miss
+      her."
+    responses:
+    - responseText: Space
+      nextNode:
+        dialogueText: "Alright, Cliff ol\u2019 boy, let\u2019s not panic."
+        responses:
+        - responseText: Space
+          nextNode:
+            dialogueText: "Aw, hellfire and biscuits, somebody done stole my truck,
+              my Bessie! Who in their right mind would steal a man\u2019s livelihood?!
+              I wasn\u2019 even gone for an hour!"
+            responses:
+            - responseText: Space
+              nextNode:
+                dialogueText: 
+                responses: []
+              sceneToLoad: 
+              animationTrigger: 
+          sceneToLoad: 
+          animationTrigger: 
+      sceneToLoad: 
+      animationTrigger: 
