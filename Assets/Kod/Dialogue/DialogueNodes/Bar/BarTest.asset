@@ -34,7 +34,7 @@ MonoBehaviour:
                   nextNode:
                     dialogueText: 
                     responses: []
-                  sceneToLoad: RIKTIG - ILASTBIL
+                  sceneToLoad: RIKTIG - Bar2
                   animationTrigger: 
               sceneToLoad: 
               animationTrigger: Drink
