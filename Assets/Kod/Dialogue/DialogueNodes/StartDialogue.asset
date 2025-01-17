@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: StartDialogue
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: "Got a load needin\u2019 haulin, a secret load from Jackson Mill
-      to Stanton Yard. Pays five hundred on delivery. You in?"
+    dialogueText: Got a load needin' haulin, a secret load from Jackson Mill to Stanton
+      Yard. Pays five hundred on delivery. You in?
     responses:
     - responseText: Continue
       nextNode:
@@ -22,9 +22,9 @@ MonoBehaviour:
         responses:
         - responseText: Continue
           nextNode:
-            dialogueText: "Secret load, huh? Heavy as sin but steady money brings
-              it in. Stanton Yard\u2019s a good piece south, though. Gonna be burnin\u2019
-              a lotta diesel to get it there."
+            dialogueText: Secret load, huh? Heavy as sin but steady money brings
+              it in. Stanton Yard's a good piece south, though. Gonna be burnin'
+              a lotta diesel to get it there.
             responses:
             - responseText: Yeah
               nextNode:

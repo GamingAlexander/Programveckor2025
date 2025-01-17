@@ -22,8 +22,8 @@ MonoBehaviour:
         responses:
         - responseText: Space
           nextNode:
-            dialogueText: "If yer goin\u2019 my way... I wanna draaag ya... aaall...
-              niiiight... looooongg!"
+            dialogueText: If yer goin' my way... I wanna draaag ya... aaall... niiiight...
+              looooongg!
             responses:
             - responseText: Space
               nextNode:

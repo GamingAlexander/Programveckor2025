@@ -19,8 +19,8 @@ MonoBehaviour:
     responses:
     - responseText: Continue
       nextNode:
-        dialogueText: "Evenin\u2019. Could say I\u2019m a bit of all three. Reckon
-          I could use a drink first, though. What\u2019s good here?"
+        dialogueText: Evenin'. Could say I'm a bit of all three. Reckon I could use
+          a drink first, though. What's good here?
         responses:
         - responseText: Continue
           nextNode:

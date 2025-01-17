@@ -14,23 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RootNode:
     dialogueText: "Now, wait just a dang minute... Where\u2019s my truck? I know
-      I parked her right there. Big an red, ol\u2019 beauty, can\u2019t exactly miss
-      her."
+      I parked her right there. Big an red, ol' beauty, can\u2019t exactly miss her."
     responses:
     - responseText: Space
       nextNode:
-        dialogueText: "Alright, Cliff ol\u2019 boy, let\u2019s not panic."
+        dialogueText: "Alright, Cliff ol' boy, let\u2019s not panic."
         responses:
         - responseText: Space
           nextNode:
-            dialogueText: "Aw, hellfire and biscuits, somebody done stole my truck,
-              my Bessie! Who in their right mind would steal a man\u2019s livelihood?!
-              I wasn\u2019 even gone for an hour!"
+            dialogueText: Aw, hellfire and biscuits, somebody done stole my truck,
+              my Bessie! Who in their right mind would steal a man's livelihood?!
+              I wasn' even gone for an hour!
             responses:
             - responseText: Space
               nextNode:
-                dialogueText: 
-                responses: []
+                dialogueText: NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!
+                responses:
+                - responseText: END
+                  nextNode:
+                    dialogueText: 
+                    responses: []
+                  sceneToLoad: 
+                  animationTrigger: 
               sceneToLoad: 
               animationTrigger: 
           sceneToLoad: 

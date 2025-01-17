@@ -14,12 +14,10 @@ public class TriggerActor : MonoBehaviour
             SpeakTo();
 
         }
-
-
-
     }
     public void SpeakTo()
     {
         DialogueManager.Instance.StartDialogue(Name, Dialogue.RootNode);
+        Destroy(gameObject);
     }
 }
