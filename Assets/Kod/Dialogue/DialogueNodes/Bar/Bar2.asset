@@ -46,14 +46,14 @@ MonoBehaviour:
                   animationTrigger: Drink
                 - responseText: Skip
                   nextNode:
-                    dialogueText: 'You really aint that daft, Cliff. '
+                    dialogueText: 'You really ain''t that daft, Cliff. '
                     responses:
                     - responseText: Space
                       nextNode:
                         dialogueText: 
-                      sceneToLoad: 
-                      animationTrigger: RIKTIG - LastStulen
-                  sceneToLoad: RIKTIG - lastStulen
+                      sceneToLoad: RIKTIG - LastStulen
+                      animationTrigger: 
+                  sceneToLoad: 
                   animationTrigger: 
               sceneToLoad: 
               animationTrigger: 

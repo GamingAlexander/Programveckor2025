@@ -757,7 +757,8 @@ PrefabInstance:
       value: ScreenFX
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 419141805897213172, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
