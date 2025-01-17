@@ -808,6 +808,10 @@ PrefabInstance:
       value: Light Stuff
       objectReference: {fileID: 0}
     - target: {fileID: 5408713591439801831, guid: 63eda5557f1fce644b1e5b852f0594db, type: 3}
+      propertyPath: light2D
+      value: 
+      objectReference: {fileID: 1456235394}
+    - target: {fileID: 5408713591439801831, guid: 63eda5557f1fce644b1e5b852f0594db, type: 3}
       propertyPath: light2DRight
       value: 
       objectReference: {fileID: 1456235394}
