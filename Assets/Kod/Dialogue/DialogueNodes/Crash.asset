@@ -24,16 +24,10 @@ MonoBehaviour:
           nextNode:
             dialogueText: God darn it all...
             responses:
-            - responseText: Space
+            - responseText: END
               nextNode:
                 dialogueText: 
-                responses:
-                - responseText: Space
-                  nextNode:
-                    dialogueText: 
-                    responses: []
-                  sceneToLoad: 
-                  animationTrigger: 
+                responses: []
               sceneToLoad: RIKTIG - Menu
               animationTrigger: 
           sceneToLoad: 
