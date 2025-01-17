@@ -554,10 +554,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5209046943669994257, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: clips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5209046943669994257, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 39edffbc61fc8c742b3d636f1ac8745d, type: 3}
     - target: {fileID: 6347483697608726052, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: m_Name
       value: Truck 2.0
       objectReference: {fileID: 0}
+    - target: {fileID: 6556569484280941357, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: screen
+      value: 
+      objectReference: {fileID: 5575392550942089939}
+    - target: {fileID: 6556569484280941357, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1608291995}
     - target: {fileID: 7190307268049648238, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: clips.Array.size
       value: 2
@@ -565,7 +581,11 @@ PrefabInstance:
     - target: {fileID: 7190307268049648238, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: clips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 41f0320842bc6ad49bf14ccff03556e7, type: 3}
+      objectReference: {fileID: 8300000, guid: 39edffbc61fc8c742b3d636f1ac8745d, type: 3}
+    - target: {fileID: 7190307268049648238, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+      propertyPath: clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 39edffbc61fc8c742b3d636f1ac8745d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -628,6 +648,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
+--- !u!114 &5575392550942089939 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 885609167593462512, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
+  m_PrefabInstance: {fileID: 5575392550942089938}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9fe301359e639245902be64cd5d9a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8454307819388653528
 PrefabInstance:
   m_ObjectHideFlags: 0
