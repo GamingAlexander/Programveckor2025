@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff038411e4daab4ebd5c814a131b0fd, type: 3}
+  m_Name: LastBilKlar
+  m_EditorClassIdentifier: 
+  RootNode:
+    dialogueText: "Well, here we are, ol\u2019 girl. Mission accomplished. Ain\u2019t
+      no one sayin\u2019 Cliff can\u2019t deliver on time."
+    responses:
+    - responseText: Space
+      nextNode:
+        dialogueText: "Alright, load\u2019s here. I've hauled the load."
+        responses:
+        - responseText: End
+          nextNode:
+            dialogueText: 
+            responses: []
+          sceneToLoad: RIKTIG - Menu
+          animationTrigger: 
+      sceneToLoad: 
+      animationTrigger: 
