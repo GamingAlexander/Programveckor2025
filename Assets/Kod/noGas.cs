@@ -21,7 +21,7 @@ public class noGas : MonoBehaviour
         {
             print("no more as lol");
             yield return new WaitForSeconds(0.1f);
-            truck.gameObject.GetComponent<drive>().driveForce -= 11;
+            truck.gameObject.GetComponent<drive>().driveForce -= 16;
         }
     }
      

@@ -46,14 +46,14 @@ MonoBehaviour:
                   animationTrigger: Drink
                 - responseText: Skip
                   nextNode:
-                    dialogueText: 'You know, you are a smart man Cliff. '
+                    dialogueText: 'You really aint that daft, Cliff. '
                     responses:
                     - responseText: Space
                       nextNode:
                         dialogueText: 
                       sceneToLoad: 
                       animationTrigger: RIKTIG - LastStulen
-                  sceneToLoad: 
+                  sceneToLoad: RIKTIG - lastStulen
                   animationTrigger: 
               sceneToLoad: 
               animationTrigger: 

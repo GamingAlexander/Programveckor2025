@@ -105532,7 +105532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -105544,7 +105544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -105556,7 +105556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 6347483697608726052, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: m_Name
@@ -106765,7 +106765,7 @@ MonoBehaviour:
   sceneName: RIKTIG - Trafficker
   audioManager: {fileID: 2006689639}
   screen: {fileID: 893519092}
-  wait: 14
+  wait: 16
   timer: 0
   active: 0
 --- !u!114 &1210551640
