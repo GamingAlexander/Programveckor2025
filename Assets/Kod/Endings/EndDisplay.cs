@@ -32,11 +32,11 @@ public class EndDisplay : MonoBehaviour
         {
             txt.text = "" + title;
             txt.transform.position = new Vector3(0, -140);
-            
+            txt.color = Color.black;
         }
         else
         {
-            imgSprite.color = new Color(0.1f, 0.1f, 0.1f);
+            //imgSprite.color = new Color(0.1f, 0.1f, 0.1f);
             transform.GetChild(0).GetComponent<Image>().color = Color.black;
         }
     }
