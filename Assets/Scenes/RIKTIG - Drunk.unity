@@ -3286,6 +3286,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2234222777259302323, guid: e26894b224392fa4d9275ebc9bc50595, type: 3}
+      propertyPath: audioSound
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234222777259302323, guid: e26894b224392fa4d9275ebc9bc50595, type: 3}
+      propertyPath: sources.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7335638237303961202, guid: e26894b224392fa4d9275ebc9bc50595, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4396,6 +4404,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6726664802522380266, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8984363651985634206, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
       propertyPath: m_Name
       value: ScreenFX
@@ -4411,7 +4423,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
 --- !u!114 &1925252431 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4323093025658051159, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
+  m_CorrespondingSourceObject: {fileID: 885609167593462512, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
   m_PrefabInstance: {fileID: 1925252430}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -4502,6 +4514,8 @@ MonoBehaviour:
   audioManager: {fileID: 542456799}
   screen: {fileID: 1925252431}
   wait: 0
+  timer: 0
+  active: 0
 --- !u!1001 &6181585401057124983
 PrefabInstance:
   m_ObjectHideFlags: 0
