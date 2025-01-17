@@ -52,7 +52,7 @@ MonoBehaviour:
                       nextNode:
                         dialogueText: 
                       sceneToLoad: 
-                      animationTrigger: RIKTIG - ILASTBIL
+                      animationTrigger: RIKTIG - LastStulen
                   sceneToLoad: 
                   animationTrigger: 
               sceneToLoad: 
@@ -69,7 +69,7 @@ MonoBehaviour:
               nextNode:
                 dialogueText: 
                 responses: []
-              sceneToLoad: RIKTIG - ILASTBIL
+              sceneToLoad: RIKTIG - drive2
               animationTrigger: 
           sceneToLoad: 
           animationTrigger: 

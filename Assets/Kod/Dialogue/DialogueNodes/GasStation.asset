@@ -56,7 +56,7 @@ MonoBehaviour:
                     - responseText: Space
                       nextNode:
                         dialogueText: 
-                      sceneToLoad: 
+                      sceneToLoad: RIKTIG - drive2
                       animationTrigger: 
                   sceneToLoad: 
                   animationTrigger: 
