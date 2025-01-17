@@ -148,14 +148,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4254931039271440536, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6726664802522380266, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
       propertyPath: m_Name
       value: ScreenFX
       objectReference: {fileID: 0}
+    - target: {fileID: 8669801733620491724, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 419141805897213172, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
