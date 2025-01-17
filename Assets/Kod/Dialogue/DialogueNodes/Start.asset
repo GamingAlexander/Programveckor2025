@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: "Well, I\u2019ll be damned\u2026 she\u2019s runnin\u2019 lower\u2019n
-      a rattlesnake in a ditch."
+    dialogueText: "Well, I'll be damned\u2026 she's runnin' lower'n a rattlesnake
+      in a ditch."
     responses:
     - responseText: Continue
       nextNode:
         dialogueText: " Dang it, Cliff, ya knew better than to skip that last fill-up.
-          Guess I\u2019ll be makin\u2019 an unscheduled pit stop. "
+          Guess I\u2019ll be makin' an unscheduled pit stop. "
         responses:
         - responseText: Next
           nextNode:

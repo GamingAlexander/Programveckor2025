@@ -29,11 +29,11 @@ MonoBehaviour:
                 responses:
                 - responseText: Space
                   nextNode:
-                    dialogueText: "No... No, no, no. This ain\u2019t real. They\u2019ll
-                      lock me up. I didn\u2019t know. I didn\u2019t know... They\u2019re
-                      just people. Just scared people."
+                    dialogueText: "No... No, no, no. This ain't real. They'll lock
+                      me up. I didn't know. I didn't know... They\u2019re just people.
+                      Just scared people."
                     responses:
-                    - responseText: Space
+                    - responseText: END
                       nextNode:
                         dialogueText: 
                       sceneToLoad: 

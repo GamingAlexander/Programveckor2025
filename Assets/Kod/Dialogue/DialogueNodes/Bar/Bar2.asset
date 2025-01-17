@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Bar2
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: "Well now, Cliff ol\u2019 buddy... you done put away a good few,
-      haven\u2019t ya? Mmm, yeah. But they were cold, an\u2019 I reckon I earned
-      \u2018em. Ain\u2019t no crime in that\u2026"
+    dialogueText: "Well now, Cliff ol' buddy... you done put away a good few, haven't
+      ya? Mmm, yeah. But they were cold, an' I reckon I earned 'em. Ain't no crime
+      in that\u2026"
     responses:
     - responseText: Space
       nextNode:
@@ -24,10 +24,10 @@ MonoBehaviour:
         responses:
         - responseText: One more
           nextNode:
-            dialogueText: "Yeah, you\u2019re good at handlin\u2019 things, Cliff.
-              You\u2019ve hauled heavier loads than this! And you ain\u2019t even
-              that drunk... just a lil\u2019 buzzed. To bad decisions! May they always
-              make for good stories later. "
+            dialogueText: "Yeah, you\u2019re good at handlin' things, Cliff. You\u2019ve
+              hauled heavier loads than this! And you ain't even that drunk... just
+              a lil' buzzed. To bad decisions! May they always make for good stories
+              later. "
             responses:
             - responseText: Space
               nextNode:
