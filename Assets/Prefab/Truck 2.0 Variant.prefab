@@ -255,7 +255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 611752403874461032, guid: a7f5682ee7e79f7499aa76fc2e6c691d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 611752403874461032, guid: a7f5682ee7e79f7499aa76fc2e6c691d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -324,6 +324,14 @@ PrefabInstance:
       propertyPath: particleWait
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2524813801117741717, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: dragParticleEffect
+      value: 
+      objectReference: {fileID: 9183460510332273932, guid: 7ca5f66b4608af7458eded20e15de153, type: 3}
+    - target: {fileID: 2524813801117741717, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
+      propertyPath: sandParticleEffect
+      value: 
+      objectReference: {fileID: 3293984965412489760, guid: 492b083b9ab25e143aac6ba035f3c79f, type: 3}
     - target: {fileID: 2775346498309549777, guid: 01ea90a26e026c14f99c67eb0780a41e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
