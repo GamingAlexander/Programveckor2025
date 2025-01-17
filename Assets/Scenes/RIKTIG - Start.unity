@@ -196,7 +196,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 4.5, y: 4.5, z: 0}
   m_MaxChunkCount: 16
@@ -2127,12 +2127,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4178177965605181805, guid: 63eda5557f1fce644b1e5b852f0594db, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5408713591439801831, guid: 63eda5557f1fce644b1e5b852f0594db, type: 3}
       propertyPath: light2D
       value: 
-      objectReference: {fileID: 511964582}
+      objectReference: {fileID: 730968554}
     - target: {fileID: 5408713591439801831, guid: 63eda5557f1fce644b1e5b852f0594db, type: 3}
       propertyPath: light2DRight
       value: 
@@ -2191,17 +2191,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &511964582 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4955941113627268031, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
-  m_PrefabInstance: {fileID: 730968551}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &523359791
@@ -105467,11 +105456,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -104.73
+      value: 40.3
       objectReference: {fileID: 0}
     - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24.599998
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -106629,6 +106618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: NoGas
   Dialogue: {fileID: 11400000, guid: da1393824d8eec444bbb711ab7cc49d3, type: 2}
+  destroy: 0
 --- !u!1 &1213940993
 GameObject:
   m_ObjectHideFlags: 0
@@ -106987,7 +106977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6726664802522380266, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8984363651985634206, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
       propertyPath: m_Name
@@ -107269,6 +107259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: DialogGas
   Dialogue: {fileID: 11400000, guid: d1dbc06ab1ea3e1438e6771bf70f5c11, type: 2}
+  destroy: 1
 --- !u!61 &1778149461
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -107891,6 +107882,10 @@ PrefabInstance:
     - target: {fileID: 5567541567470270194, guid: 7dc09ce7caa56294fa062c74b04c0b2b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293601802770058396, guid: 7dc09ce7caa56294fa062c74b04c0b2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

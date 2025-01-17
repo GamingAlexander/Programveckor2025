@@ -4,7 +4,7 @@ public class TriggerActor : MonoBehaviour
 {
     public string Name;
     public Dialogue Dialogue;
-
+    [SerializeField] bool destroy = true;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,6 +18,10 @@ public class TriggerActor : MonoBehaviour
     public void SpeakTo()
     {
         DialogueManager.Instance.StartDialogue(Name, Dialogue.RootNode);
-        Destroy(gameObject);
+        if (destroy == true)
+        {
+            Destroy(gameObject);
+
+        }
     }
 }
