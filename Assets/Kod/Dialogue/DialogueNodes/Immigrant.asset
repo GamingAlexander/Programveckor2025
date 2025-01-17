@@ -33,7 +33,7 @@ MonoBehaviour:
                       me up. I didn't know. I didn't know... They\u2019re just people.
                       Just scared people."
                     responses:
-                    - responseText: Space
+                    - responseText: END
                       nextNode:
                         dialogueText: 
                       sceneToLoad: 
