@@ -105465,18 +105465,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1670798589252925039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1749673739620233723, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
-      propertyPath: dragParticleEffect
-      value: 
-      objectReference: {fileID: 9183460510332273932, guid: 7ca5f66b4608af7458eded20e15de153, type: 3}
-    - target: {fileID: 1749673739620233723, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
-      propertyPath: sandParticleEffect
-      value: 
-      objectReference: {fileID: 3293984965412489760, guid: 492b083b9ab25e143aac6ba035f3c79f, type: 3}
     - target: {fileID: 2145372409599471039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -104.73
@@ -105517,14 +105505,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3224441022341389483, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237089175427301757, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.21
-      objectReference: {fileID: 0}
     - target: {fileID: 6347483697608726052, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
       propertyPath: m_Name
       value: Truck 2.0 Variant
@@ -105537,13 +105517,7 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 2006689639}
-    - target: {fileID: 6757842232318101933, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6757842232318101933, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
-    - {fileID: 2512046072602379624, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
