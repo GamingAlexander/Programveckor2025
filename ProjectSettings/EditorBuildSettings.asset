@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RIKTIG - Drunk.unity
     guid: 799a6f6011eeb704296f535e7f46fb18
+  - enabled: 1
+    path: Assets/Scenes/Endings/RIKTIG - Mexico.unity
+    guid: 2e10d04c2773a45488f19f3b3c8e1168
   m_configObjects: {}

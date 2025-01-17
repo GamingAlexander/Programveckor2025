@@ -654,6 +654,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2234222777259302323, guid: e26894b224392fa4d9275ebc9bc50595, type: 3}
+      propertyPath: sources.Array.data[1]
+      value: 
+      objectReference: {fileID: 919912555}
+    - target: {fileID: 2234222777259302323, guid: e26894b224392fa4d9275ebc9bc50595, type: 3}
+      propertyPath: sources.Array.data[2]
+      value: 
+      objectReference: {fileID: 615034122}
     - target: {fileID: 7335638237303961202, guid: e26894b224392fa4d9275ebc9bc50595, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -933,6 +941,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+--- !u!82 &615034122 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4524410569717318947, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+  m_PrefabInstance: {fileID: 538689883}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &641543040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1422,6 +1435,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c2dffc8635fa0246b1007a1aef56782, type: 3}
+--- !u!82 &919912555 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3926950323988194340, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+  m_PrefabInstance: {fileID: 538689883}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &923673218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2131,7 +2149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8293601802770058396, guid: 7dc09ce7caa56294fa062c74b04c0b2b, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2349,7 +2367,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -66783,7 +66801,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 4.5, y: 4.5, z: 0}
   m_MaxChunkCount: 16
