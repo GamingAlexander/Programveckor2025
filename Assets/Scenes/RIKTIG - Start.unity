@@ -106356,6 +106356,14 @@ PrefabInstance:
       propertyPath: responseButtonContainer
       value: 
       objectReference: {fileID: 1291334857}
+    - target: {fileID: 6706228393338846105, guid: 5575128291bba9746804db001a553025, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706228393338846105, guid: 5575128291bba9746804db001a553025, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e073899504f7e0b44bdbd685ab98022e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
