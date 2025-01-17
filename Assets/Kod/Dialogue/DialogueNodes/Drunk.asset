@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RootNode:
     dialogueText: "Liiiife is a hiiighwaaay\u2026 I wanna riiiide it\u2026 aaall
-      niiight loooong! If you\u2019re goin\u2019 my waaay\u2026 I wanna draaag ya\u2026
-      aaall niiight loooong! "
+      niiight loooong! "
     responses:
     - responseText: Space
       nextNode:
