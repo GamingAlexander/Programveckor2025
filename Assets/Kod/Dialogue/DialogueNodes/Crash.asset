@@ -10,38 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eff038411e4daab4ebd5c814a131b0fd, type: 3}
-  m_Name: Immigrant
+  m_Name: Crash
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: "oh yeah mmmm\u2026"
+    dialogueText: Nooooo...
     responses:
     - responseText: Space
       nextNode:
-        dialogueText: What the hell...?
+        dialogueText: Why...
         responses:
         - responseText: Space
           nextNode:
-            dialogueText: "No... No, no, no. This ain\u2019t real. "
+            dialogueText: Damn...
             responses:
             - responseText: Space
               nextNode:
-                dialogueText: "They\u2019ll lock me up. I didn\u2019t know. I didn\u2019t
-                  know... "
+                dialogueText: 
                 responses:
-                - responseText: Continue
+                - responseText: Space
                   nextNode:
-                    dialogueText: "They\u2019re just people. Just scared people."
-                    responses:
-                    - responseText: Space
-                      nextNode:
-                        dialogueText: 
-                      sceneToLoad: 
-                      animationTrigger: 
+                    dialogueText: 
+                    responses: []
                   sceneToLoad: 
                   animationTrigger: 
               sceneToLoad: 
               animationTrigger: 
           sceneToLoad: 
-          animationTrigger: Open
+          animationTrigger: 
       sceneToLoad: 
-      animationTrigger: Bang
+      animationTrigger: 
