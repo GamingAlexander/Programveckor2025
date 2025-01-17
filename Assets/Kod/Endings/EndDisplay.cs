@@ -32,7 +32,7 @@ public class EndDisplay : MonoBehaviour
         {
             txt.text = "" + title;
             txt.transform.position = new Vector3(0, -140);
-            
+            txt.color = Color.black;
         }
         else
         {
