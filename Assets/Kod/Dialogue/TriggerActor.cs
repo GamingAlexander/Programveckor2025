@@ -5,10 +5,7 @@ public class TriggerActor : MonoBehaviour
     public string Name;
     public Dialogue Dialogue;
 
-    private void Start()
-    {
-        SpeakTo();
-    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
