@@ -106,7 +106,7 @@ public class drive : MonoBehaviour
                 }
             }
         }
-        if(SceneManager.GetActiveScene().name != "RIKTIG - Drunk")
+        if(SceneManager.GetActiveScene().name != "RIKTIG - Drunk" && driveForce > 0)
         {
             if (Input.GetKey(KeyCode.A)) //svänga vänster och höger
             {

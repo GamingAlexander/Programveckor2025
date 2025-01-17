@@ -20,7 +20,7 @@ MonoBehaviour:
       nextNode:
         dialogueText: "Alright, load\u2019s here. I've hauled the load."
         responses:
-        - responseText: End
+        - responseText: END
           nextNode:
             dialogueText: 
             responses: []
