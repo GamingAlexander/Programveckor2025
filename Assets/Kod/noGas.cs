@@ -17,11 +17,11 @@ public class noGas : MonoBehaviour
 
     IEnumerator noMoreGas()
     {
-        for (int i = 0; i < 300; i++)
+        for (int i = 0; i < 350; i++)
         {
             print("no more as lol");
             yield return new WaitForSeconds(0.1f);
-            truck.gameObject.GetComponent<drive>().driveForce -= 21;
+            truck.gameObject.GetComponent<drive>().driveForce -= 11;
         }
     }
      
