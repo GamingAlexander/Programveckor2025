@@ -148,13 +148,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100404340}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7, y: -84.6, z: -0.36899328}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 4.8, y: -75.6, z: -0.36899328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &100404342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3093,6 +3093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Mexico
   Dialogue: {fileID: 11400000, guid: 220e6e1b1f099a747b81b469039b4232, type: 2}
+  destroy: 1
 --- !u!1001 &1628138457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67049,7 +67050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4178177965605181805, guid: 63eda5557f1fce644b1e5b852f0594db, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5408713591439801831, guid: 63eda5557f1fce644b1e5b852f0594db, type: 3}
       propertyPath: light2DRight
