@@ -1628,10 +1628,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 109593730309d024b915789029f28453, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 46c0c05e82775734bab4afe6aad7116a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.5
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -2757,6 +2757,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 913639918}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2060922753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2892,14 +2904,14 @@ MonoBehaviour:
   - Mexico
   - Trafficker
   - Alcholism
-  - Good Boy
+  - Stolen love
   endingSprites:
   - {fileID: 21300000, guid: 328b663c930f6464bb3da05a7d20a162, type: 3}
   - {fileID: 21300000, guid: 03ea19ac288ed3848a7cd8425b161803, type: 3}
   - {fileID: 21300000, guid: d84d2cddc18b269428c3b1a25da60231, type: 3}
   - {fileID: 21300000, guid: 13ba6f302bf7b6144bdea21c5848072a, type: 3}
   - {fileID: 21300000, guid: f19f3c5671c4997479f0fc88656168b1, type: 3}
-  - {fileID: 21300000, guid: 328b663c930f6464bb3da05a7d20a162, type: 3}
+  - {fileID: 21300000, guid: 2ca82c46fd6cac646b75dbb26cf64b2e, type: 3}
 --- !u!114 &2070246476
 MonoBehaviour:
   m_ObjectHideFlags: 0

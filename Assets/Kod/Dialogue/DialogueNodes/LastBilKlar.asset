@@ -10,27 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eff038411e4daab4ebd5c814a131b0fd, type: 3}
-  m_Name: Crash
+  m_Name: LastBilKlar
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: Holy mother of Christ, Cliff... What have ya done...
+    dialogueText: "Well, here we are, ol\u2019 girl. Mission accomplished. Ain\u2019t
+      no one sayin\u2019 Cliff can\u2019t deliver on time."
     responses:
     - responseText: Space
       nextNode:
-        dialogueText: 'Why''s it turnin'' out like this...  ''Ah was just takin a
-          lil'' shorcut. '
+        dialogueText: "Alright, load\u2019s here. I've hauled the load."
         responses:
-        - responseText: Space
+        - responseText: End
           nextNode:
-            dialogueText: God darn it all...
-            responses:
-            - responseText: END
-              nextNode:
-                dialogueText: 
-                responses: []
-              sceneToLoad: RIKTIG - Menu
-              animationTrigger: 
-          sceneToLoad: 
+            dialogueText: 
+            responses: []
+          sceneToLoad: RIKTIG - Menu
           animationTrigger: 
       sceneToLoad: 
       animationTrigger: 

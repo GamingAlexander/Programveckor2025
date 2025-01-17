@@ -47,6 +47,8 @@ public class offroaders : LoadSceneTrigger
 
         if (collision.gameObject.tag == "STEN" && timer2 < 0)
         {
+            audio.playAudio(1);
+            audio.prioriticeAudio = true;
             stones += 1;
             if (stones == 3)
                 die();
