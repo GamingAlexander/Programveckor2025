@@ -65,4 +65,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RIKTIG - Menu.unity
     guid: 25599f8ba2ea01c49981c5a6dd84ddf2
+  - enabled: 1
+    path: Assets/Scenes/Endings/RIKTIG - klarLastbil.unity
+    guid: 070311b3a3a1a11418bf5eb1bd481e42
   m_configObjects: {}
