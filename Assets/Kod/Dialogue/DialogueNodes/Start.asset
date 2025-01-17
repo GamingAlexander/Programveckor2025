@@ -23,21 +23,12 @@ MonoBehaviour:
         responses:
         - responseText: Next
           nextNode:
-            dialogueText: "Load\u2019s strapped down tighter\u2019n Aunt May\u2019s
-              Sunday corset, so at least that\u2019s somethin\u2019. "
+            dialogueText: 'It has some miles left. So maybe I can make it. '
             responses:
-            - responseText: Next
+            - responseText: Space
               nextNode:
-                dialogueText: "Ain\u2019t no way I\u2019m runnin\u2019 outta juice
-                  on a stretch like this, though."
-                responses:
-                - responseText: Next
-                  nextNode:
-                    dialogueText: "Better start lookin\u2019 fer a station \u2018fore
-                      I\u2019m hoofin\u2019 it to the nearest pump. "
-                    responses: []
-                  sceneToLoad: 
-                  animationTrigger: 
+                dialogueText: 
+                responses: []
               sceneToLoad: 
               animationTrigger: 
           sceneToLoad: 
