@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: Crash
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: Nooooo...
+    dialogueText: Holy mother of Christ, Cliff... What have ya done...
     responses:
     - responseText: Space
       nextNode:
-        dialogueText: Why...
+        dialogueText: 'Why''s it turnin'' out like this...  ''Ah was just takin a
+          lil'' shorcut. '
         responses:
         - responseText: Space
           nextNode:
-            dialogueText: Damn...
+            dialogueText: God darn it all...
             responses:
             - responseText: Space
               nextNode:
@@ -33,7 +34,7 @@ MonoBehaviour:
                     responses: []
                   sceneToLoad: 
                   animationTrigger: 
-              sceneToLoad: 
+              sceneToLoad: RIKTIG - Menu
               animationTrigger: 
           sceneToLoad: 
           animationTrigger: 

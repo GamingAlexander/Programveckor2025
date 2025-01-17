@@ -7,7 +7,7 @@ public class LoadSceneTrigger : MonoBehaviour
 {
     public string sceneName;
     public AudioTool audioManager;
-    public   DarkScreen screen;
+    public DarkScreen screen;
     drive truck;
     public float wait;
     public float timer;

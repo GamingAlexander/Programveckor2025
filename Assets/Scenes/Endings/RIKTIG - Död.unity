@@ -130,6 +130,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 460522212223860474, guid: d95e65cceea737b478ed9f09bd3684ca, type: 3}
+      propertyPath: endings.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3426195765549991842, guid: d95e65cceea737b478ed9f09bd3684ca, type: 3}
       propertyPath: m_Name
       value: Ending Trigger
