@@ -148,13 +148,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100404340}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7, y: -84.6, z: -0.36899328}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 4.8, y: -75.6, z: -0.36899328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &100404342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2212,6 +2212,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c2dffc8635fa0246b1007a1aef56782, type: 3}
+--- !u!114 &1146832893 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1670798589252925039, guid: 2edf1cf40cd89f647a82eecf0dba40e2, type: 3}
+  m_PrefabInstance: {fileID: 538689883}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1163434855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3093,6 +3104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Mexico
   Dialogue: {fileID: 11400000, guid: 220e6e1b1f099a747b81b469039b4232, type: 2}
+  destroy: 1
 --- !u!1001 &1628138457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67049,12 +67061,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4178177965605181805, guid: 63eda5557f1fce644b1e5b852f0594db, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5408713591439801831, guid: 63eda5557f1fce644b1e5b852f0594db, type: 3}
+      propertyPath: light2D
+      value: 
+      objectReference: {fileID: 1146832893}
     - target: {fileID: 5408713591439801831, guid: 63eda5557f1fce644b1e5b852f0594db, type: 3}
       propertyPath: light2DRight
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1146832893}
     - target: {fileID: 9155694792997583964, guid: 63eda5557f1fce644b1e5b852f0594db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -67370,7 +67386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6726664802522380266, guid: 9eabdf11d20f3fe4bab616068a2e0263, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
