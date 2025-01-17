@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: StartDialogue
   m_EditorClassIdentifier: 
   RootNode:
-    dialogueText: Got a load needin' haulin, a secret load from Jackson Mill to Stanton
-      Yard. Pays five hundred on delivery. You in?
+    dialogueText: 'Contractor: "Got a load needin'' haulin, a secret load from Jackson
+      Mill to Stanton Yard. Pays five hundred on delivery. You in?"'
     responses:
-    - responseText: Continue
+    - responseText: Space
       nextNode:
         dialogueText: Heh. Straight to the point, just how I like it.
         responses:
-        - responseText: Continue
+        - responseText: Space
           nextNode:
             dialogueText: Secret load, huh? Heavy as sin but steady money brings
               it in. Stanton Yard's a good piece south, though. Gonna be burnin'
@@ -32,7 +32,7 @@ MonoBehaviour:
                 responses:
                 - responseText: Continue
                   nextNode:
-                    dialogueText: "Knew you\u2019d bite, Cliff. "
+                    dialogueText: "Contractor: \"Knew you\u2019d bite, Cliff.\""
                     responses:
                     - responseText: Continue
                       nextNode:
@@ -49,7 +49,7 @@ MonoBehaviour:
                 responses:
                 - responseText: Continue
                   nextNode:
-                    dialogueText: "Knew you\u2019d bite, Cliff. "
+                    dialogueText: "Contractor: \"Knew you\u2019d bite, Cliff.\""
                     responses:
                     - responseText: Continue
                       nextNode:
@@ -66,7 +66,7 @@ MonoBehaviour:
                 responses:
                 - responseText: Continue
                   nextNode:
-                    dialogueText: "Knew you\u2019d bite, Cliff. "
+                    dialogueText: "Contractor: \"Knew you\u2019d bite, Cliff.\""
                     responses:
                     - responseText: Continue
                       nextNode:
@@ -83,7 +83,7 @@ MonoBehaviour:
                 responses:
                 - responseText: Continue
                   nextNode:
-                    dialogueText: "Knew you\u2019d bite, Cliff. "
+                    dialogueText: "Contractor: \"Knew you\u2019d bite, Cliff.\""
                     responses:
                     - responseText: Continue
                       nextNode:
@@ -97,4 +97,4 @@ MonoBehaviour:
           sceneToLoad: 
           animationTrigger: Scroll
       sceneToLoad: 
-      animationTrigger: 
+      animationTrigger: Scroll
