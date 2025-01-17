@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7575542246785065250, guid: ab2f021cd2c14db4c872744600c167cf, type: 3}
       propertyPath: Name
-      value: Stulen
+      value: Bar
       objectReference: {fileID: 0}
     - target: {fileID: 7575542246785065250, guid: ab2f021cd2c14db4c872744600c167cf, type: 3}
       propertyPath: Dialogue

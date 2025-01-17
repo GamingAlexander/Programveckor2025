@@ -60,7 +60,7 @@ MonoBehaviour:
                   animationTrigger: Scroll
               sceneToLoad: 
               animationTrigger: 
-            - responseText: Huckleberry
+            - responseText: Yep!
               nextNode:
                 dialogueText: "I\u2019m yer huckleberry."
                 responses:

@@ -36,7 +36,7 @@ MonoBehaviour:
                     - responseText: END
                       nextNode:
                         dialogueText: 
-                      sceneToLoad: 
+                      sceneToLoad: RIKTIG - Menu
                       animationTrigger: 
                   sceneToLoad: 
                   animationTrigger: 
