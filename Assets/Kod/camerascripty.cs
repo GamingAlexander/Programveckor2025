@@ -32,6 +32,6 @@ public class cameraScripty : MonoBehaviour
             moveSpeed = 5;
         }
         else
-            moveSpeed = 1;
+            moveSpeed = 3;
     }
 }
